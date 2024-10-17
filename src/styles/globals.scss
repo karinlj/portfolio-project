@@ -152,36 +152,48 @@ a {
   display: block;
   text-align: center;
   margin-bottom: 1rem;
-  font-size: 16rem;
+  font-size: 5.5rem;
   color: $themecolorPink;
-  // @media ${device.mobileS} {
-  //   font-size: 5.5rem;
-  // }
-  // @media ${device.mobileM} {
-  //   font-size: 6.5rem;
-  // }
-  // @media ${device.laptopL} {
-  //   font-size: 14rem;
-  // }
+  @media all and (min-width: $mobileS) {
+    font-size: 8rem;
+  }
+  @media all and (min-width: $mobileM) {
+    font-size: 10rem;
+  }
+  @media all and (min-width: $laptop) {
+    font-size: 14rem;
+  }
+  @media all and (min-width: $laptopL) {
+    font-size: 16rem;
+  }
 }
 .home_small_heading {
   display: block;
   margin: 2rem 0;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: 700;
   text-transform: none;
+  @media all and (min-width: $mobileM) {
+    font-size: 1.8rem;
+  }
 }
 .small_heading {
   text-transform: uppercase;
   margin: 4rem 0 2rem 0;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
+  @media all and (min-width: $mobileM) {
+    font-size: 1.3rem;
+  }
 }
 .large_text {
   p {
-    font-size: 2.4rem;
+    font-size: 1.7rem;
     font-weight: 700;
     position: relative;
     z-index: 10;
+    @media all and (min-width: $mobileM) {
+      font-size: 2.4rem;
+    }
   }
 }
 .heading_3 {

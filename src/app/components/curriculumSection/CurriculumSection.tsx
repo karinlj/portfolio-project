@@ -1,5 +1,6 @@
 import Accordion from "../accordion/Accordion";
 import { TypeResumeFields } from "../../porfolio_types";
+import "./_curriculumSection.scss";
 
 const CurriculumSection: React.FC<TypeResumeFields> = ({ fields }) => {
   const { title, titleLink, date, description, siteList, subItemList } = fields;
