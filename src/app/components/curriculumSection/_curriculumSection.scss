@@ -1,0 +1,53 @@
+@import "../../../styles/variables.scss";
+
+.curriculum_item {
+  position: relative;
+  width: 100%;
+  padding: 0.5rem 0;
+  color: $textcolor_dark;
+  // p {
+  //   color: ${({ theme }) => theme.text_inverse};
+  // }
+  // a {
+  //   cursor: pointer;
+  //   color: ${({ theme }) => theme.text_inverse};
+  //   &:hover {
+  //     transition: all 1s ease;
+  //     text-decoration: none;
+  //     color: ${colors.linkcolor};
+  //   }
+  // }
+  .date {
+    display: block;
+    padding: 0.2rem 0 0.5rem 0;
+    margin: 0;
+    font-size: 0.8rem;
+  }
+  .description {
+    font-size: 0.9rem;
+  }
+}
+
+.curriculum_item_heading {
+  font-size: 1rem;
+  letter-spacing: 0.8px;
+  margin-bottom: 0rem;
+  // color: ${({ theme }) => theme.text_inverse};
+}
+
+.styled_site_item {
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  a {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0.3rem;
+    color: $linkcolor;
+    &:hover {
+      color: $linkcolor;
+      transition: all 0.5s ease;
+      text-decoration: none;
+    }
+  }
+}

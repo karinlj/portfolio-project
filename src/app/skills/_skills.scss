@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+
+.skills_section {
+  min-height: 100vh;
+  .skills_row {
+    margin-bottom: 2rem;
+    @media all and (min-width: $laptop) {
+      margin-bottom: 1rem;
+    }
+    @media all and (min-width: $desktop) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  .skills_box_item {
+    margin-bottom: 2rem;
+    @media all and (min-width: $mobileM) {
+      margin-bottom: 1.5rem;
+    }
+
+    .box_item_icon_content {
+      text-align: center;
+      width: 50%;
+    }
+    .icon {
+      margin-bottom: 0.5rem;
+      //   font-size: 2.5rem;
+      font-size: 2.5rem;
+    }
+    .text {
+      font-size: 0.75rem;
+    }
+  }
+  .skills_sub_header {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+    // color: ${({ theme }) => theme.text};
+  }
+}

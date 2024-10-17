@@ -1,0 +1,66 @@
+@import "../../../styles/variables.scss";
+
+.accordion_btn {
+  background: transparent;
+  border: none;
+  padding: 0.4rem;
+  border: 1px solid $themecolorBlueLight;
+  // border: 1px solid ${({ theme }) => theme.border_color_inverse};
+  margin: 0.5rem auto;
+  border-radius: $themeBorderRadius;
+  width: 100%;
+  text-align: left;
+  .heading {
+    cursor: pointer;
+    transition: all 0.4s linear;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    .arrow {
+      transition: all 0.3s linear;
+      font-size: 0.9rem;
+      margin-left: 0.5rem;
+      height: 1rem;
+      color: $textcolor_white;
+      // color: ${({ theme }) => theme.text_inverse};
+      padding: 2px;
+      &:hover {
+        color: $linkcolor;
+      }
+    }
+  }
+  .cv_content {
+    margin-bottom: 0;
+    padding: 0rem 1rem 0rem 2rem;
+    font-size: 90%;
+    max-height: 0;
+    overflow-y: hidden;
+    transition: all 0.4s ease-out;
+    opacity: 0;
+    line-height: 1.5;
+    color: $textcolor_white;
+  }
+  &.open {
+    .heading {
+      margin-bottom: 1rem;
+    }
+    .arrow {
+      transform: rotate(180deg);
+    }
+    .cv_content {
+      opacity: 1;
+      max-height: 350px;
+    }
+  }
+}
+
+.accordion_heading {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 0;
+  color: $textcolor_white;
+  // color: ${({ theme }) => theme.text_inverse};
+  @media all and (min-width: $mobileM) {
+    font-size: 0.9rem;
+  }
+}

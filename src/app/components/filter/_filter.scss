@@ -1,0 +1,108 @@
+@import "../../../styles/variables.scss";
+
+section.styled_filter_options {
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  display: flex;
+  //custom checkboxes
+  /* Customize the label (the container) */
+  .option {
+    text-transform: capitalize;
+    display: block;
+    position: relative;
+    padding-left: 1.6rem;
+    margin-bottom: 12px;
+    margin-right: 0.7rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    @media all and (min-width: $mobileM) {
+      margin-right: 1rem;
+      padding-left: 1.9rem;
+    }
+    /* Hide the browser's default checkbox */
+    input.sr_only {
+      position: absolute;
+      clip: rect(1px, 1px, 1px, 1px);
+      overflow: hidden;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      height: 19px;
+      width: 19px;
+      z-index: 100;
+      &:checked {
+        ~ .checkmark {
+          border: 1px solid $bluecolor;
+          background-color: $bluecolor;
+          /* Show checkmark when checked */
+          &:after {
+            display: block;
+          }
+        }
+      }
+      &:focus {
+        ~ .checkmark {
+          padding: 0.5rem;
+          outline: solid 2px $textcolor_dark;
+          outline-offset: 5px;
+          border-radius: 1px;
+        }
+      }
+    }
+    /* Create a custom checkbox */
+    .checkmark {
+      border-radius: 3px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 19px;
+      width: 19px;
+      background-color: $lightgray;
+      border: 1px solid $text_gray;
+      @media all and (min-width: $mobileM) {
+        height: 21px;
+        width: 21px;
+      }
+      /* Create the checkmark/indicator (hidden when not checked) */
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        //style it
+        left: 7px;
+        top: 3px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        @media all and (min-width: $mobileM) {
+          left: 8px;
+          top: 4px;
+        }
+      }
+    }
+    /* On mouse-over, add a grey background color */
+    &:hover {
+      input {
+        ~ .checkmark {
+          filter: drop-shadow(0 0 3px white);
+          transition: all 1s ease;
+        }
+      }
+    }
+    &:active {
+      input {
+        ~ .checkmark {
+          filter: none;
+        }
+      }
+    }
+  }
+}

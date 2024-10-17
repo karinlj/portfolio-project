@@ -1,0 +1,26 @@
+@import "../../styles//variables.scss";
+
+.curriculum_bg_wrapper {
+  position: relative;
+  padding: 3rem 1rem;
+  border-radius: $themeBorderRadius;
+  transition: all 0.2s linear;
+  @media all and (min-width: $mobileS) {
+    padding: 3rem 0;
+  }
+}
+.curriculum_title {
+  font-size: 1.3rem;
+  // color: ${({ theme }) => theme.text_inverse};
+  @media all and (min-width: $mobileM) {
+    font-size: 1.6rem;
+  }
+}
+
+.resume_link {
+  color: $linkcolor;
+  transition: all 1s ease;
+  &:hover {
+    filter: drop-shadow(0 0 3px white);
+  }
+}

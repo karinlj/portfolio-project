@@ -1,0 +1,27 @@
+@import "../../../styles/variables.scss";
+@import "./navlinks.scss";
+
+li.nav_social_link_item {
+  @extend .link_item;
+
+  margin-bottom: 0.3rem;
+  a.link {
+    color: $linkcolor;
+    &.active,
+    :visited {
+      color: $linkcolor;
+    }
+  }
+  i {
+    font-size: 1.1rem;
+    height: 30px;
+  }
+}
+
+ul.nav_link_list_social {
+  @extend .nav_link_list;
+
+  justify-content: flex-end;
+  flex: 0 0 auto;
+  margin: 0;
+}

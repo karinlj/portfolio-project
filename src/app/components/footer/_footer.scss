@@ -1,0 +1,68 @@
+@import "../../../styles/variables.scss";
+
+.footer_section {
+  padding: 1rem;
+  min-height: 150px;
+  @media all and (min-width: $mobileM) {
+    margin-left: 6.2rem;
+    padding: 3.5rem 3.5rem 1.5rem 3.5rem;
+  }
+  p {
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+.footer_logo_wrapper {
+  @media all and (min-width: $mobileM) {
+    float: right;
+  }
+}
+.back_to_top_link {
+  float: right;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  transition: all 0.3s ease-in;
+  &:hover {
+    transform: translateY(-4px);
+    filter: drop-shadow(0 0 3px white);
+  }
+  &:active {
+    transform: translateY(-4px);
+    filter: none;
+  }
+  a {
+    color: #fff;
+  }
+}
+.footer_logo_section {
+  clear: both;
+  div {
+    width: 5.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  a {
+    transition: all 1s ease;
+    &:hover {
+      filter: drop-shadow(0 0 3px white);
+      text-decoration: none;
+    }
+  }
+  img {
+    display: inline;
+    &.react_logo {
+      width: 2rem;
+      height: auto;
+    }
+    &.contentful_logo {
+      width: 1.5rem;
+      height: auto;
+    }
+  }
+}
+
+p.footer_copy {
+  margin-top: 2rem;
+}
