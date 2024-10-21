@@ -11,17 +11,16 @@ import {
   faGitSquare,
   faSquareJs,
 } from "@fortawesome/free-brands-svg-icons";
-// import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { getSkillsData as getSkillsData_API } from "../portfolio_api";
 
 const Skills: React.FC = async () => {
   const skillsData = await getSkillsData_API();
-
   if (!skillsData) {
     return <div>Loading ...</div>;
   }
 
-  const devIcons = [
+  const devIcons: IconDefinition[] = [
     faFigma,
     faHtml5,
     faSass,
@@ -34,7 +33,6 @@ const Skills: React.FC = async () => {
     faCode,
     faGitSquare,
   ];
-
   const getIcon = (iconName: string) => {
     const icon = devIcons.find((item) => {
       return item.iconName === iconName;

@@ -2,10 +2,22 @@
 
 .about_me_section {
   background: $themecolorBlue;
-  .content_section {
+  .styled_card.pict {
+    margin-top: 2rem;
+    @media all and (min-width: $laptop) {
+      margin-top: 0;
+    }
   }
   .me_pict {
     top: 0;
     right: 0;
+  }
+  .me_pict_caption {
+    color: $textcolor_dark;
+    font-size: 1rem;
+    margin-top: 1rem;
+    @media all and (min-width: $laptop) {
+      font-size: 1.1rem;
+    }
   }
 }

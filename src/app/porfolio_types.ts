@@ -34,7 +34,7 @@ export type TypeHomeDataSkeleton = EntrySkeletonType<
 export interface TypeAboutPageFields {
   heading?: EntryFields.Symbol;
   content?: EntryFields.RichText;
-  link?: EntryFields.Symbol;
+  mePict?: EntryFields.AssetLink;
 }
 export type TypeAboutPageSkeleton = EntrySkeletonType<
   TypeAboutPageFields,
@@ -45,6 +45,7 @@ export type TypeAboutPageSkeleton = EntrySkeletonType<
 export interface TypeAboutPageMoreFields {
   heading?: EntryFields.Symbol;
   description?: EntryFields.Text;
+  imageBoxes?: EntryFields.Object;
 }
 export type TypeAboutPageMoreSkeleton = EntrySkeletonType<
   TypeAboutPageMoreFields,
@@ -56,7 +57,6 @@ export interface TypeProjectFields {
   title?: EntryFields.Symbol;
   link?: EntryFields.Symbol;
   image?: Asset;
-  // image?: IImage;
   releaseDate?: EntryFields.Date;
   techniques?: EntryFields.Symbol[];
   description?: EntryFields.Text;
@@ -74,7 +74,7 @@ export type TypePersonalProjectSkeleton = EntrySkeletonType<
 >;
 
 //project fields for component
-export interface TypeProjectFields {
+export interface TypeProjectComponentFields {
   project: {
     fields: {
       title?: EntryFields.Symbol;

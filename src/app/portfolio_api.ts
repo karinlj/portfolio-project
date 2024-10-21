@@ -19,7 +19,7 @@ export const getHomeData = async () => {
     if (!response || !response.items) {
       throw new Error("No OK Home data response");
     }
-    console.log("home_response:", response);
+    // console.log("home_response:", response);
     const dataFields = response.items[0];
     return dataFields;
   } catch (err) {
@@ -35,7 +35,7 @@ export const getAboutData = async () => {
     if (!response || !response.items) {
       throw new Error("No OK About data response");
     }
-    console.log("about_response:", response);
+    // console.log("about_response:", response);
     const dataFields = response.items[0];
     return dataFields;
   } catch (err) {
@@ -51,8 +51,10 @@ export const getAboutExtraData = async () => {
     if (!response || !response.items) {
       throw new Error("No OK AboutExtra data response");
     }
-    console.log("aboutPageMore_response:", response);
+    // console.log("aboutPageMore_response:", response);
     const dataFields = response.items[0]; //single item here
+    console.log("aboutPageMore_dataFields:", dataFields);
+
     return dataFields;
   } catch (err) {
     console.log("error: ", err);

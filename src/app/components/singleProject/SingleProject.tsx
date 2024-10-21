@@ -1,9 +1,9 @@
 import Link from "next/link";
 import "./_singleProject.scss";
 import Image from "next/image";
-import { TypeProjectFields, IImage } from "../../porfolio_types";
+import { TypeProjectComponentFields, IImage } from "../../porfolio_types";
 
-const SingleProject: React.FC<TypeProjectFields> = ({ project }) => {
+const SingleProject: React.FC<TypeProjectComponentFields> = ({ project }) => {
   const { link, image, title, releaseDate, techniques, description } =
     project.fields;
 
@@ -26,14 +26,13 @@ const SingleProject: React.FC<TypeProjectFields> = ({ project }) => {
 
       <div className="styled_image_container">
         <Image
-          loader={() => src}
           src={src}
           alt={projectImage!.fields.title}
+          className="styled_image"
           width={0}
           height={0}
+          sizes="100vw"
           style={{ width: "100%", height: "auto" }}
-          quality={100}
-          className="styled_image"
         />
       </div>
       <section className="styled_content_container">

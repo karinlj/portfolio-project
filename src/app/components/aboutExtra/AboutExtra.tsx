@@ -9,7 +9,6 @@ import {
   TypeAboutPageMoreSkeleton,
   TypeAboutPageMoreFields,
 } from "../../porfolio_types";
-import type { Entry } from "contentful";
 
 const AboutExtra: React.FC = () => {
   const [aboutExtraData, setAboutExtraData] =
@@ -26,76 +25,94 @@ const AboutExtra: React.FC = () => {
     }
   };
   const [index, setIndex] = useState<number>(0);
-  const boxes = [
-    {
-      text: "I get inspired by my cats and nature, colors and culture and being active within animal welfare.",
-      imageLeft: "filip_lo",
-      imageCenter: "vilda2",
-      imageRight: "lo",
-    },
-    {
-      text: "blabla2",
-      imageLeft: "truls_tree",
-      imageCenter: "hugo_play",
-      imageRight: "filip_truls",
-    },
-    {
-      text: "blabla3",
-      imageLeft: "filip_tree",
-      imageCenter: "vilda",
-      imageRight: "lo_window",
-    },
-  ];
-  const handleClick = () => {
-    setIndex((prevIndex) => (prevIndex < boxes.length - 1 ? prevIndex + 1 : 0));
-  };
+  // const boxes = [
+  //   {
+  //     imageLeft: "filip_lo",
+  //     imageCenter: "vilda2",
+  //     imageRight: "lo",
+  //   },
+  //   {
+  //     imageLeft: "truls_tree",
+  //     imageCenter: "hugo_play",
+  //     imageRight: "filip_truls",
+  //   },
+  //   {
+  //     imageLeft: "filip_tree",
+  //     imageCenter: "vilda",
+  //     imageRight: "lo_window",
+  //   },
+  // ];
 
-  const cardsGrid = boxes.map((box, i) => {
-    return (
-      <div className="row" key={i}>
-        <div className="col">
-          <div className="styled_card">
-            {" "}
-            <Image
-              src={require(`/public/${box.imageLeft}.jpg`)}
-              alt="cat"
-              className=""
-              key={i}
-            />
+  const imageBoxes = aboutExtraData?.fields.imageBoxes;
+
+  let cardsGrid = [];
+  if (imageBoxes!) {
+    cardsGrid = imageBoxes.map((box, i) => {
+      return (
+        <div className="row" key={i}>
+          <div className="col-12 col-md-4">
+            <div className="styled_card">
+              {" "}
+              <Image
+                src={require(`/public/${box.imageLeft}.jpg`)}
+                alt="cat"
+                className="grid_pict"
+                key={i}
+              />
+            </div>
+          </div>
+
+          <div className="col-12 col-md-4">
+            <div className="styled_card">
+              {" "}
+              <Image
+                src={require(`/public/${box.imageCenter}.jpg`)}
+                alt="cat"
+                className="grid_pict"
+                key={i}
+              />
+            </div>
+          </div>
+
+          <div className="col-12 col-md-4">
+            <div className="styled_card">
+              {" "}
+              <Image
+                src={require(`/public/${box.imageRight}.jpg`)}
+                alt="cat"
+                className="grid_pict"
+                key={i}
+              />
+            </div>
           </div>
         </div>
-
-        <div className="col">
-          <div className="styled_card">
-            {" "}
-            <Image
-              src={require(`/public/${box.imageCenter}.jpg`)}
-              alt="cat"
-              className=""
-              key={i}
-            />
-          </div>
-        </div>
-
-        <div className="col">
-          <div className="styled_card">
-            {" "}
-            <Image
-              src={require(`/public/${box.imageRight}.jpg`)}
-              alt="cat"
-              className=""
-              key={i}
-            />
-          </div>
-        </div>
-      </div>
-    );
-  });
+      );
+    });
+  }
   const currentCard = cardsGrid[index];
+
+  const handleClick = () => {
+    setIndex((prevIndex) =>
+      prevIndex < imageBoxes!.length - 1 ? prevIndex + 1 : 0
+    );
+  };
 
   useEffect(() => {
     getData();
+    if (aboutExtraData!) {
+      // console.log("imageBoxes", imageBoxes[0].imageLeft);
+    }
+    console.log("aboutExtraData", aboutExtraData);
   }, []);
+
+  // useEffect(() => {
+  //   if (aboutExtraData.fields.imageBoxes!) {
+  //     console.log(
+  //       "aboutExtraData",
+  //       aboutExtraData.fields.imageBoxes[0].imageCenter
+  //     );
+  //   }
+  // }, [aboutExtraData]);
 
   // Make sure aboutExtraData is not undefined
   if (!aboutExtraData) {
@@ -114,7 +131,7 @@ const AboutExtra: React.FC = () => {
           <section className="content_section large_text white">
             <div className="container">
               <div className="row justify-content-between">
-                <div className="col-12 col-lg-9">
+                <div className="col-12 col-lg-10">
                   <div className="styled_info_box">
                     <p>{description}</p>
                     <button
