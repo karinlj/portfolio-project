@@ -2,10 +2,20 @@
 
 .about_me_more_section {
   background: $themecolorBlue;
+  .col-12 {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  @media all and (min-width: $laptopL) {
+    .col-12 {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+ 
 }
 .styled_info_box {
   display: flex;
-  //   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   border-radius: 25px;
@@ -25,26 +35,48 @@
   border-radius: 50%;
   // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   box-shadow: $themeBoxShadow;
+  display: none;
+  font-size: 1.2rem;
+  @media all and (min-width: $mobileM) {
+    display: inline-block ;
+  }
+  @media all and (min-width: $laptopL) {
+    font-size: 1.8rem;
+  }
   &:hover {
     /* filter: drop-shadow(0 0 3px ${colors.background_darkgrey}); */
     filter: drop-shadow(0 0 3px white);
     transition: all 1s ease;
   }
-  font-size: 2.2rem;
+
 }
 
 .styled_card {
   background: #f9f9f9;
   padding: 1rem 1rem 5.5rem 1rem;
+    margin-bottom: 1.5rem;
+
   border-radius: 25px;
   //clamp(minimum, preferred, maximum);
   //   height: 450px;
   //   width: auto;
-  min-height: clamp(4rem, 26vw, 26rem);
-  margin-bottom: 1.5rem;
-  // @media all and (min-width: $mobileM) {
-  //   margin-bottom: 0;
-  // }
+  // height: clamp(20px, 24vh, 700px);
+  @media all and (min-width: $mobileS) {
+    // min-height: clamp(20px, 40vw, 700px);
+  }
+  @media all and (min-width: $mobileM) {
+    padding: 0.5rem 0.5rem 3.5rem 0.5rem;
+
+    // max-width: clamp(500px, 21vw, 700px);
+    // min-height: clamp(20px, 35vw, 700px);
+  }
+  @media all and (min-width: $laptop) {
+    padding: 1rem 1rem 5.5rem 1rem;
+  }
+  @media all and (min-width: $laptopL) {
+    padding: 1rem 1rem 5.5rem 1rem;
+  }
+
   img {
     // height: clamp(4rem, 26vw, 26rem);
     object-fit: cover;
@@ -52,5 +84,13 @@
     width: 100%;
     /* border-radius: 25px 25px 0 0; */
     border-radius: 25px;
+    height: clamp(20px, 24vh, 700px);
+    @media all and (min-width: $mobileM) {
+      max-height: clamp(4rem, 23vw, 26rem);
+    }
+    @media all and (min-width: $laptopL) {
+      max-height: clamp(4rem, 26vw, 26rem);
+      min-height: clamp(4rem, 26vw, 26rem);
+    }
   }
 }

@@ -52,6 +52,16 @@ export type TypeAboutPageMoreSkeleton = EntrySkeletonType<
   "aboutPageMore"
 >;
 
+export interface TypeImageGridFields {
+  title?: EntryFields.Symbol;
+  sortDate: EntryFields.Date;
+  imageGrid?: EntryFields.Array<EntryFields.AssetLink>;
+}
+
+export type TypeImageGridSkeleton = EntrySkeletonType<TypeImageGridFields, "imageGrid">;
+// export type TypeImageGrid<Modifiers extends ChainModifiers, Locales extends LocaleCode = LocaleCode> = Entry<TypeImageGridSkeleton, Modifiers, Locales>;
+
+
 //project
 export interface TypeProjectFields {
   title?: EntryFields.Symbol;

@@ -14,8 +14,11 @@
 }
 
 .footer_logo_wrapper {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
   @media all and (min-width: $mobileM) {
-    float: right;
+    // float: right;
   }
 }
 .back_to_top_link {

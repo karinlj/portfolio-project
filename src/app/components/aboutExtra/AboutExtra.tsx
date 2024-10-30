@@ -1,5 +1,5 @@
 "use client";
-import { getAboutExtraData as getAboutExtraData_API } from "../../portfolio_api";
+import { getAboutExtraData as getAboutExtraData_API, getImageGrid as getImageGrid_API } from "../../portfolio_api";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRedo } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect, ReactNode } from "react";
@@ -7,16 +7,20 @@ import "./_aboutExtra.scss";
 import Image from "next/image";
 import {
   TypeAboutPageMoreSkeleton,
-  TypeAboutPageMoreFields,
+  TypeAboutPageMoreFields,TypeImageGridSkeleton,IImage
 } from "../../porfolio_types";
 
 const AboutExtra: React.FC = () => {
+  const [rowIndex, setRowIndex] = useState<number>(0);
+
   const [aboutExtraData, setAboutExtraData] =
-    useState<TypeAboutPageMoreSkeleton>({
-      fields: {},
-      contentTypeId: "aboutPageMore",
-    });
-  const getData = async () => {
+    useState<TypeAboutPageMoreSkeleton  | null>(null);
+
+   const [imageGrid, setImageGrid] =
+    useState<TypeImageGridSkeleton [] | []>([]);
+
+  
+  const getAboutExtraData = async () => {
     try {
       const data = await getAboutExtraData_API();
       setAboutExtraData(data as any);
@@ -24,98 +28,69 @@ const AboutExtra: React.FC = () => {
       console.error("Error fetching data:", error);
     }
   };
-  const [index, setIndex] = useState<number>(0);
-  // const boxes = [
-  //   {
-  //     imageLeft: "filip_lo",
-  //     imageCenter: "vilda2",
-  //     imageRight: "lo",
-  //   },
-  //   {
-  //     imageLeft: "truls_tree",
-  //     imageCenter: "hugo_play",
-  //     imageRight: "filip_truls",
-  //   },
-  //   {
-  //     imageLeft: "filip_tree",
-  //     imageCenter: "vilda",
-  //     imageRight: "lo_window",
-  //   },
-  // ];
 
-  const imageBoxes = aboutExtraData?.fields.imageBoxes;
+  const getImageGrid = async () => {
+    try {
+      const data = await getImageGrid_API();
+      setImageGrid(data as any);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
 
-  let cardsGrid = [];
-  if (imageBoxes!) {
-    cardsGrid = imageBoxes.map((box, i) => {
+  let cardsRow  = [];
+
+    if (imageGrid!) {
+      cardsRow = imageGrid.map((row, i) => {
       return (
-        <div className="row" key={i}>
-          <div className="col-12 col-md-4">
-            <div className="styled_card">
-              {" "}
-              <Image
-                src={require(`/public/${box.imageLeft}.jpg`)}
-                alt="cat"
-                className="grid_pict"
-                key={i}
-              />
-            </div>
-          </div>
+        <div className="row">
+          {row.fields.imageGrid?.map((item, index) => {
+              const src = `https:${item.fields.file?.url}`;
 
-          <div className="col-12 col-md-4">
-            <div className="styled_card">
-              {" "}
-              <Image
-                src={require(`/public/${box.imageCenter}.jpg`)}
-                alt="cat"
-                className="grid_pict"
-                key={i}
-              />
+            return (
+              <div className="col-12 col-md-4" key={index}>
+              <div className="styled_card">
+                <Image
+                  src={src}
+                  alt="cat"
+                  className="grid_pict"
+                  key={i}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
             </div>
-          </div>
-
-          <div className="col-12 col-md-4">
-            <div className="styled_card">
-              {" "}
-              <Image
-                src={require(`/public/${box.imageRight}.jpg`)}
-                alt="cat"
-                className="grid_pict"
-                key={i}
-              />
-            </div>
-          </div>
+            )
+          })}
         </div>
       );
     });
   }
-  const currentCard = cardsGrid[index];
+  const currentRow = cardsRow[rowIndex];
 
   const handleClick = () => {
-    setIndex((prevIndex) =>
-      prevIndex < imageBoxes!.length - 1 ? prevIndex + 1 : 0
+    setRowIndex((prevIndex) =>
+      prevIndex < imageGrid!.length - 1 ? prevIndex + 1 : 0
     );
   };
 
   useEffect(() => {
-    getData();
-    if (aboutExtraData!) {
-      // console.log("imageBoxes", imageBoxes[0].imageLeft);
-    }
+    getAboutExtraData();
     console.log("aboutExtraData", aboutExtraData);
+
+    getImageGrid()
+    if (imageGrid!) {
+      //  console.log("imageBoxes", imageBoxes[0].imageLeft);
+    }
+    console.log("imageGrid", imageGrid);
   }, []);
 
-  // useEffect(() => {
-  //   if (aboutExtraData.fields.imageBoxes!) {
-  //     console.log(
-  //       "aboutExtraData",
-  //       aboutExtraData.fields.imageBoxes[0].imageCenter
-  //     );
-  //   }
-  // }, [aboutExtraData]);
+
 
   // Make sure aboutExtraData is not undefined
-  if (!aboutExtraData) {
+  if (!aboutExtraData || !imageGrid) {
     return <div>Loading...</div>;
   }
   const heading = aboutExtraData?.fields.heading as ReactNode;
@@ -128,7 +103,7 @@ const AboutExtra: React.FC = () => {
           <div className="container">
             <h2 className="small_heading">{heading}</h2>
           </div>
-          <section className="content_section large_text white">
+                <section className="content_section large_text white">
             <div className="container">
               <div className="row justify-content-between">
                 <div className="col-12 col-lg-10">
@@ -144,7 +119,7 @@ const AboutExtra: React.FC = () => {
                   </div>
                 </div>
               </div>
-              {currentCard}
+              {currentRow}
             </div>
           </section>
         </>

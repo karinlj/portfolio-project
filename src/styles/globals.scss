@@ -64,14 +64,21 @@ section.home_wrapper,
 .skills_section,
 .project_section,
 .resume_section {
-  padding: 3.5rem 1rem;
+  padding: 1.5rem 1rem;
+  // @media all and (min-width: $mobileS) {
+  //   margin-left: 7rem;
+  //   padding: 3.5rem 4rem 6rem 4rem;
+  // }
   @media all and (min-width: $mobileM) {
     margin-left: 7rem;
     padding: 3.5rem 4rem 6rem 4rem;
   }
 }
 section.home_wrapper {
-  min-height: 90vh;
+  min-height: 65vh;
+  @media all and (min-width: $mobileM) {
+    min-height: 90vh;
+  }
 }
 .about_me_section {
   @media all and (min-width: $mobileM) {
@@ -150,12 +157,12 @@ a {
 //font-styles text
 .home_heading {
   display: block;
-  text-align: center;
   margin-bottom: 1rem;
   font-size: 5.5rem;
   color: $themecolorPink;
   @media all and (min-width: $mobileS) {
-    font-size: 8rem;
+    font-size: 9rem;
+    text-align: center;
   }
   @media all and (min-width: $mobileM) {
     font-size: 10rem;
@@ -170,9 +177,13 @@ a {
 .home_small_heading {
   display: block;
   margin: 2rem 0;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   text-transform: none;
+  @media all and (min-width: $mobileS) {
+    font-size: 1.5rem;
+    // text-align: center;
+  }
   @media all and (min-width: $mobileM) {
     font-size: 1.8rem;
   }
@@ -199,18 +210,28 @@ a {
 .heading_3 {
   margin-bottom: 0.1rem;
   color: $themecolorPink;
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   @media all and (min-width: $mobileS) {
-    font-size: 4.8rem;
+    font-size: 3.8rem;
   }
-  // @media all and (min-width: $mobileM) {
-  //   margin-left: 6.2rem;
-  //   padding: 3.5rem 3.5rem 1rem 3.5rem;
-  // }
-  // @media all and (min-width: $desktopL) {
-  //   margin-left: 6.2rem;
-  //   padding: 3.5rem 3.5rem 1rem 3.5rem;
-  // }
+  @media all and (min-width: $mobileM) {
+    font-size: 4rem;
+  }
+  @media all and (min-width: $laptop) {
+    font-size: 5rem;
+  }
+  @media all and (min-width: $laptopL) {
+    font-size: 6rem;
+  }
+
+  //   $mobileXS: 480px;
+  // $mobileS: 576px;
+  // $mobileM: 768px;
+  // $laptop: 992px;
+  // $laptopL: 1200px;
+  // $desktop: 1400px;
+  // $desktopL: 1600px;
+
   &.upper {
     text-transform: uppercase;
   }

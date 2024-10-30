@@ -8,7 +8,7 @@ import {
   TypeWorkItemSkeleton,
   TypeSchoolItemSkeleton,
   TypeSkillNewSkeleton,
-  TypeSkills24Skeleton,
+  TypeSkills24Skeleton,TypeImageGridSkeleton
 } from "./porfolio_types";
 
 export const getHomeData = async () => {
@@ -60,6 +60,27 @@ export const getAboutExtraData = async () => {
     console.log("error: ", err);
   }
 };
+
+
+export const getImageGrid = async () => {
+  try {
+    const response = await client.getEntries<TypeImageGridSkeleton>({
+      content_type: "imageGrid",
+      order: "fields.sortDate" as any,
+
+    });
+    if (!response || !response.items) {
+      throw new Error("No OK imageGrid data response");
+    }
+    const dataFields = response.items; //array here
+    console.log("imageGrid_dataFields:", dataFields);
+
+    return dataFields;
+  } catch (err) {
+    console.log("error: ", err);
+  }
+};
+
 
 export const getProjectData = async () => {
   try {

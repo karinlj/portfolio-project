@@ -16,56 +16,44 @@ const Footer: React.FC = () => {
           position: "relative",
         }}
       >
-        <div className="row align-items-end">
-          <div className="col-12 col-md-8">
-            <h3 className="heading_3">Karin Ljunggren</h3>
-            <h3 className="heading_3">Front end dev.</h3>
+        <h3 className="heading_3">
+          Karin Ljunggren <br /> Front End dev.
+        </h3>
+        <section className="footer_logo_wrapper">
+          <section className="footer_logo_section">
+            <p>Powered by:</p>
+            <div>
+              <a href="https://reactjs.org/">
+                <Image
+                  src={react_logo}
+                  alt="React logo"
+                  className="react_logo"
+                  width={80}
+                />
+              </a>
+              <span style={{ fontSize: "1.2rem" }}>& </span>
+              <a href="https://www.contentful.com/">
+                <Image
+                  src={contentful_logo}
+                  alt="Contentful logo"
+                  className="contentful_logo"
+                  width={80}
+                />
+              </a>
+            </div>
+          </section>
+          <div className="back_to_top_link">
+            <Link href="#siteContent">
+              <span className="to_top_icon">
+                {" "}
+                <FontAwesomeIcon icon={faAngleUp} aria-label="Top of page" />
+              </span>
+            </Link>
           </div>
-          <div className="col-12 col-md-4">
-            <section className="footer_logo_wrapper">
-              <div className="back_to_top_link">
-                <Link href="#siteContent">
-                  <span className="to_top_icon">
-                    {" "}
-                    <FontAwesomeIcon
-                      icon={faAngleUp}
-                      aria-label="Top of page"
-                    />
-                  </span>
-                </Link>
-              </div>
-              <section className="footer_logo_section">
-                <p>Powered by:</p>
-                <div>
-                  <a href="https://reactjs.org/">
-                    <Image
-                      src={react_logo}
-                      alt="React logo"
-                      className="react_logo"
-                      width={80}
-                    />
-                  </a>
-                  <span style={{ fontSize: "1.2rem" }}>& </span>
-                  <a href="https://www.contentful.com/">
-                    <Image
-                      src={contentful_logo}
-                      alt="Contentful logo"
-                      className="contentful_logo"
-                      width={80}
-                    />
-                  </a>
-                </div>
-              </section>
-            </section>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-12 col-md-4">
-            <p className="footer_copy">
-              © {new Date().getFullYear()}- Karin Ljunggren
-            </p>{" "}
-          </div>
-        </div>
+        </section>
+        <p className="footer_copy">
+          © {new Date().getFullYear()}- Karin Ljunggren
+        </p>{" "}
       </div>
     </section>
   );
