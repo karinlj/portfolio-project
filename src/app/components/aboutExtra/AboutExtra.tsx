@@ -6,8 +6,8 @@ import { useState, useEffect, ReactNode } from "react";
 import "./_aboutExtra.scss";
 import Image from "next/image";
 import {
-  TypeAboutPageMoreSkeleton,
-  TypeAboutPageMoreFields,TypeImageGridSkeleton,IImage
+  TypeAboutPageMoreSkeleton,TypeImageGridFields,
+  TypeImageGridSkeleton
 } from "../../porfolio_types";
 
 const AboutExtra: React.FC = () => {
@@ -78,18 +78,12 @@ const AboutExtra: React.FC = () => {
 
   useEffect(() => {
     getAboutExtraData();
-    console.log("aboutExtraData", aboutExtraData);
-
     getImageGrid()
-    if (imageGrid!) {
-      //  console.log("imageBoxes", imageBoxes[0].imageLeft);
-    }
-    console.log("imageGrid", imageGrid);
   }, []);
 
 
 
-  // Make sure aboutExtraData is not undefined
+  // Make sure data is not undefined
   if (!aboutExtraData || !imageGrid) {
     return <div>Loading...</div>;
   }
@@ -112,7 +106,7 @@ const AboutExtra: React.FC = () => {
                     <button
                       className="styled_reload_btn"
                       onClick={handleClick}
-                      title="Next image"
+                      title="Next image row"
                     >
                       <FontAwesomeIcon icon={faRedo} aria-hidden="true" />
                     </button>

@@ -1,7 +1,8 @@
 @import "../../styles/variables.scss";
 
 .resume_section {
-  background: $themecolorBlue;
+  // background: $themecolorBlue;
+
 }
 .curriculum_bg_wrapper {
   position: relative;
@@ -11,6 +12,9 @@
   background: rgb(249, 249, 249);
   @media all and (min-width: $mobileS) {
     padding: 3rem 2rem;
+  }
+  a{
+    color: $linkcolorDark;
   }
 }
 .curriculum_title {

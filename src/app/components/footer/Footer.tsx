@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const Footer: React.FC = () => {
   return (
-    <section className="footer_section">
+    <footer className="footer_section">
       <div
         className="container"
         style={{
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
           © {new Date().getFullYear()}- Karin Ljunggren
         </p>{" "}
       </div>
-    </section>
+    </footer>
   );
 };
 export default Footer;

@@ -61,7 +61,7 @@ const Resume: React.FC = () => {
               {/* Work Experience */}
               <section className="curriculum_bg_wrapper">
                 <div>
-                  <h2 className="curriculum_title">Work Experience</h2>
+                  <h2 className="small_heading resume">Work Experience</h2>
 
                   <section>
                     {loadingWorkItems && <p>...Loading</p>}
@@ -83,7 +83,7 @@ const Resume: React.FC = () => {
               {/* education */}
               <section className="curriculum_bg_wrapper">
                 <div>
-                  <h2 className="curriculum_title">Education</h2>
+                  <h2 className="small_heading resume">Education</h2>
                   <section>
                     {loadingSchoolItems && <p>...Loading</p>}
                     {schoolItems &&
