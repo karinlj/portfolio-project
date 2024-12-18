@@ -1,19 +1,46 @@
 @import "../../../styles/variables.scss";
 
 .footer_section {
+  clear: both;
+border-top: 2px solid $themecolorBlue;
   padding: 1rem;
   min-height: 150px;
   @media all and (min-width: $mobileM) {
     margin-left: 6.2rem;
     padding: 3.5rem 3.5rem 1.5rem 3.5rem;
   }
+
+  .nav_link_list_social{
+    flex-direction: row;
+    justify-content: flex-start;
+    .nav_social_link_item{
+      a.link {
+        color: #fff;
+        &.active,
+        :visited {
+          color: #fff;
+        }
+      }
+      &:first-child{
+        margin-left: -1rem;
+
+      }
+    }
+    @media all and (min-width: $mobileM) {
+   display: none;
+    }
+  }
   p {
     margin-bottom: 0.5rem;
     font-size: 0.8rem;
   }
+  .heading_3 span{
+    display: block;
+    margin-top: 0;
+  }
 }
 
-.footer_logo_wrapper {
+.footer_bottom_wrapper {
   margin-top: 2rem;
   display: flex;
   justify-content: space-between;
@@ -39,7 +66,7 @@
   }
 }
 .footer_logo_section {
-  clear: both;
+  margin-top: 2rem;
   div {
     width: 5.3rem;
     display: flex;
@@ -55,13 +82,14 @@
   }
   img {
     display: inline;
-    &.react_logo {
-      width: 2rem;
+    &.next_logo {
+      width: 2.5rem;
       height: auto;
     }
     &.contentful_logo {
-      width: 1.5rem;
+      width: 2rem;
       height: auto;
+
     }
   }
 }

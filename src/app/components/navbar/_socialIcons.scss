@@ -3,7 +3,8 @@
 
 li.nav_social_link_item {
   @extend .link_item;
-
+height: 45px;
+width: 45px;
   margin-bottom: 0.3rem;
   a.link {
     color: $linkcolor;

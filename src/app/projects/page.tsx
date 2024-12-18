@@ -23,6 +23,7 @@ const Projects: React.FC = () => {
     { id: 1, name: "vuejs", isChecked: true },
     { id: 2, name: "reactjs", isChecked: true },
     { id: 3, name: "wordpress", isChecked: true },
+    { id: 4, name: "ux", isChecked: true },
   ];
 
   //functon with names of checked items as parameter from Filter comp
@@ -41,7 +42,9 @@ const Projects: React.FC = () => {
   useEffect(() => {
     getData();
     console.log("my projects", projectData);
-  }, []);
+    console.log("checkedTecniqueNames", checkedTecniqueNames);
+
+  }, [checkedTecniqueNames]);
 
   if (!projectData) {
     return <div>Loading...</div>;
@@ -54,7 +57,6 @@ const Projects: React.FC = () => {
           <p>My Client Projects</p>
           <Filter displayItems={displayItems} activeFilter={activeFilter} />
 
-          {/* <div className="row my-gutters"> */}
           <div className="row my-gutters">
             {/* {loading && (
                   <StyledContentLoading>...Loading</StyledContentLoading>

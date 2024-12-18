@@ -8,15 +8,17 @@
   // p {
   //   color: ${({ theme }) => theme.text_inverse};
   // }
-  // a {
-  //   cursor: pointer;
-  //   color: ${({ theme }) => theme.text_inverse};
-  //   &:hover {
-  //     transition: all 1s ease;
-  //     text-decoration: none;
-  //     color: ${colors.linkcolor};
-  //   }
-  // }
+  a {
+    cursor: pointer;
+    // color: ${({ theme }) => theme.text_inverse};
+    &:hover {
+      color: $linkcolor;
+      transition: all 0.5s ease;
+      // transition: all 1s ease;
+      // text-decoration: none;
+      // color: ${colors.linkcolor};
+    }
+  }
   .date {
     display: block;
     padding: 0.2rem 0 0.5rem 0;
@@ -47,7 +49,6 @@
     &:hover {
       color: $linkcolor;
       transition: all 0.5s ease;
-      text-decoration: none;
     }
   }
 }

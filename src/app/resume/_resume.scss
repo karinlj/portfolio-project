@@ -1,10 +1,10 @@
 @import "../../styles/variables.scss";
 
 .resume_section {
-  // background: $themecolorBlue;
 
 }
 .curriculum_bg_wrapper {
+  margin-top: 1rem;
   position: relative;
   padding: 3rem 1rem;
   border-radius: $themeBorderRadius;
@@ -14,7 +14,10 @@
     padding: 3rem 2rem;
   }
   a{
-    color: $linkcolorDark;
+    color: $turqoise_dark;
+    &:hover{
+      color: $turqoise_medium;
+    }
   }
 }
 .curriculum_title {
@@ -27,8 +30,11 @@
 }
 
 .resume_link {
-  color: $linkcolor;
+  color: $turqoise_light;
   transition: all 1s ease;
+  float: right;
+  display: block;
+  padding-bottom: 2rem;
   &:hover {
     filter: drop-shadow(0 0 3px white);
   }

@@ -1,6 +1,6 @@
 import "./_skills.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPuzzlePiece, faCode } from "@fortawesome/free-solid-svg-icons";
+import { faPuzzlePiece, faCode, faEye, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import {
   faFigma,
   faHtml5,
@@ -9,7 +9,7 @@ import {
   faReact,
   faVuejs,
   faGitSquare,
-  faSquareJs,
+  faSquareJs
 } from "@fortawesome/free-brands-svg-icons";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { getSkillsData as getSkillsData_API } from "../portfolio_api";
@@ -32,6 +32,7 @@ const Skills: React.FC = async () => {
     faPuzzlePiece,
     faCode,
     faGitSquare,
+    faEye,faCircleInfo
   ];
   const getIcon = (iconName: string) => {
     const icon = devIcons.find((item) => {
@@ -48,7 +49,7 @@ const Skills: React.FC = async () => {
       <section className="content_section">
         <div className="container">
           <div className="row justify-content-between">
-            <div className="col-12 col-lg-9 col-xl-10">
+            <div className="col-12 col-lg-10 col-xl-12">
               <div className="skills_row">
                 {skillsData &&
                   skillsData?.map((skillsDataItem) => {

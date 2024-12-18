@@ -4,6 +4,10 @@ section.styled_filter_options {
   padding: 1rem 0;
   margin-bottom: 1rem;
   display: flex;
+  flex-direction: column;
+  @media all and (min-width: $mobileM) {
+    flex-direction: row;
+  }
   //custom checkboxes
   /* Customize the label (the container) */
   .option {

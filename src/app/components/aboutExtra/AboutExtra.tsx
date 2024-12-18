@@ -58,7 +58,7 @@ const AboutExtra: React.FC = () => {
                   width={0}
                   height={0}
                   sizes="100vw"
-                  style={{ width: "100%", height: "auto" }}
+                  style={{ width: "100%", height: "100%" }}
                 />
               </div>
             </div>
@@ -102,7 +102,6 @@ const AboutExtra: React.FC = () => {
               <div className="row justify-content-between">
                 <div className="col-12 col-lg-10">
                   <div className="styled_info_box">
-                    <p>{description}</p>
                     <button
                       className="styled_reload_btn"
                       onClick={handleClick}
@@ -110,6 +109,8 @@ const AboutExtra: React.FC = () => {
                     >
                       <FontAwesomeIcon icon={faRedo} aria-hidden="true" />
                     </button>
+                    <p>{description}</p>      
+
                   </div>
                 </div>
               </div>

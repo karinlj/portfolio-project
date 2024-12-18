@@ -73,7 +73,7 @@ const NavLinks: React.FC<IProps> = ({ clickLink }) => {
       <ul className="nav_link_list">
         {linkList.map((item, index) => {
           return (
-            <li key={index} className="nav_link_item">
+            <li key={index} className="link_item">
               <Link
                 href={item.path}
                 className={`link ${

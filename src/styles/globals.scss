@@ -9,33 +9,26 @@
   &.dark {
     background: $themecolorBlueDark;
     .nav_header {
-      border-right: 1px solid whitesmoke;
+      border-right: 1px solid  $text_gray;;
     }
     .about_me_section,
     .about_me_more_section {
-      border-top: 1px solid whitesmoke;
+      border-top: 1px solid  $text_gray;;
       color-scheme: dark;
       background: $themecolorBlueDark;
     }
     footer {
-      border-top: 1px solid whitesmoke;
+      border-top: 1px solid $text_gray;
     }
   }
-  // color-scheme: light
 }
-// @media (prefers-color-scheme: dark) {
-//   // color-scheme: dark;
-//   :root {
-//       background: black;
-//   }
-// }
 
-:focus{
+
+:focus-visible{
   outline: 4px dotted lightgrey;
   outline-offset: 5px;
   border-radius: none;
 }
-
 
 * {
   box-sizing: border-box;
@@ -44,12 +37,10 @@
 }
 body {
   // font-family: Georgia, "Times New Roman", Times, serif, sans-serif;
-  position: relative;
   // font-family: "Rubik", "Helvetica", sans-serif;
+  position: relative;
   font-size: 0.9rem;
-  // background: ${({ theme }) => theme.background};
   color: $textcolor_white;
-  // background: $themecolorBlueDarker;
   transition: all 0.2s linear;
 }
 body.no_scroll {
@@ -65,38 +56,11 @@ body.no_scroll {
     opacity: 1;
   }
 }
-.theme_switch {
-  position: absolute;
-  z-index: 1000;
-  top: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: $themecolorBlueDark;
-color: lightyellow;
-  border: none;
-  padding: 0.5rem;
-  &.dark {
-    background: $themecolorBlueDarker;
-  }
-&:hover{
-  opacity: 0.8;
-}
-// &:focus{
-//   outline: 4px dotted white;
-//   outline-offset: 5px;
-//   border-radius: none;
-// }
-  svg {
-    font-size: 1.5rem;
-  }
-}
 
 main {
   // animation: transitionIn 1.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: transitionIn 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  padding-bottom: 3rem;
+  animation: transitionIn 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  // padding-bottom: 3rem;
 }
 section.home_wrapper,
 .about_me_section,
@@ -105,30 +69,32 @@ section.home_wrapper,
 .project_section,
 .resume_section {
   padding: 1.5rem 1rem;
-  // @media all and (min-width: $mobileS) {
-  //   margin-left: 7rem;
-  //   padding: 3.5rem 4rem 6rem 4rem;
-  // }
   @media all and (min-width: $mobileM) {
     margin-left: 7rem;
     padding: 3.5rem 4rem 6rem 4rem;
   }
 }
+.dark {
+  section.home_wrapper {
+    background-image: url(../../public/flower_dark.png);
+  }
+}
+
 section.home_wrapper {
   min-height: 65vh;
+  background-image: url(../../public/flower.png);
+  background-size:auto;
+  background-repeat: repeat;
+
   @media all and (min-width: $mobileM) {
     min-height: 90vh;
   }
-}
-.about_me_section {
-  @media all and (min-width: $mobileM) {
-    margin-left: 7rem;
-    padding: 3.5rem 3.5rem 0rem 3.5rem;
+  .content_section{
+    opacity: 1;
+ 
   }
 }
-// .skills_section {
-//   background: $themecolorBlue;
-// }
+
 .my-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -183,9 +149,9 @@ a {
 }
 .emfasis {
   font-weight: 700;
-  color: $green_light;
+  color: $turqoise_light;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   // text-shadow: -6px 3px 1px rgba(244, 144, 151, 1);
 }
 
@@ -206,7 +172,7 @@ a {
     font-size: 14rem;
   }
   @media all and (min-width: $laptopL) {
-    font-size: 16rem;
+    font-size: 18rem;
   }
 }
 .home_small_heading {
@@ -217,10 +183,12 @@ a {
   text-transform: none;
   @media all and (min-width: $mobileS) {
     font-size: 1.5rem;
-    // text-align: center;
   }
   @media all and (min-width: $mobileM) {
     font-size: 1.8rem;
+  }
+  @media all and (min-width: $laptopL) {
+    font-size: 2.4rem;
   }
 }
 .small_heading {
@@ -263,14 +231,6 @@ a {
     font-size: 6rem;
   }
 
-  //   $mobileXS: 480px;
-  // $mobileS: 576px;
-  // $mobileM: 768px;
-  // $laptop: 992px;
-  // $laptopL: 1200px;
-  // $desktop: 1400px;
-  // $desktopL: 1600px;
-
   &.upper {
     text-transform: uppercase;
   }
@@ -312,9 +272,6 @@ section {
   p {
     font-size: 1rem;
     line-height: 1.4;
-    // @media all and (min-width: $xl-min) {
-    //   font-size: 1.05rem;
-    // }
   }
   h2,
   h3,
@@ -331,35 +288,19 @@ section {
     max-width: 1500px;
   }
 }
-// .row {
-//   display: flex;
-//   -ms-flex-wrap: wrap;
-//   flex-wrap: wrap;
-//   margin-right: -15px;
-//   margin-left: -15px;
-//   &.justify-space-between {
-//     justify-content: space-between;
-//   }
-// }
+
 .cursive {
   /* font-family: "Amatic SC", cursive; */
   // font-family: "Rubik", cursive;
   font-weight: 700;
 }
-// @media (prefers-color-scheme: dark) {
-//   html {
-//     color-scheme: dark;
-//   }
-// }
+
 
 //HOME
 .home_wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // height: calc(100vh - 3.5rem);
-  // height: calc(100vh - 11rem);
-  // background: $themecolorBlueDarker;
 }
 
 //image wrapper
@@ -373,9 +314,6 @@ section {
   margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
-  // justify-content: flex-end;
-  // background-image: url("../../public/hugo.jpg");
-  // background-image: url(${(props) => props.mobileImage});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -383,8 +321,6 @@ section {
   margin: 30px 0;
 
   @media all and (min-width: $mobileM) {
-    //     background-image: url(${(props) => props.image});
-    // margin-left: 7rem;
     padding: 3.5rem 3.5rem 1rem 3.5rem;
   }
   &::before {

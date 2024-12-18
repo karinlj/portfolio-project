@@ -1,7 +1,18 @@
 @import "../../styles/variables.scss";
 
+
+
+
+.dark {
+  .skills_section {
+    background-image: url(../../../public/solar_code_dark.png);
+  }
+}
 .skills_section {
   min-height: 100vh;
+  background-image: url(../../../public/solar_code.png);
+  background-size:auto;
+  background-repeat: repeat;
   .skills_row {
     margin-bottom: 2rem;
     @media all and (min-width: $laptop) {

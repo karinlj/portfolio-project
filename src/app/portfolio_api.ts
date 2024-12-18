@@ -93,6 +93,8 @@ export const getProjectData = async () => {
     }
     console.log("project_response:", response);
     const dataFields = response.items; //array here
+    console.log("project_dataFields:", dataFields);
+
     return dataFields;
   } catch (err) {
     console.log("error: ", err);
@@ -159,9 +161,9 @@ export const getSkillsData = async () => {
     if (!response || !response.items) {
       throw new Error("No OK About data response");
     }
-    console.log("skills_response:", response);
+    // console.log("skills_response:", response);
     const dataFields = response.items;
-    console.log("skills_dataFields:", dataFields);
+    // console.log("skills_dataFields:", dataFields);
     // console.log(
     //   "skills_dataFields_1_skills:",
     //   dataFields[0]?.fields.skillsList[0]

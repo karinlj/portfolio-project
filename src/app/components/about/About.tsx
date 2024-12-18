@@ -48,7 +48,7 @@ const About: React.FC = async () => {
                   width={300}
                   height={0}
                   sizes="100vw"
-                  style={{ width: "100%", height: "auto" }}
+                  style={{ width: "100%", height: "100%" }}
                 />
                 <p className="me_pict_caption">{mePictTitle}</p>
               </div>

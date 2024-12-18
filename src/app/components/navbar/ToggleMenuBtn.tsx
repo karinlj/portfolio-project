@@ -2,17 +2,17 @@ import "./_toggleMenuBtn.scss";
 
 interface IProps {
   toggleMenu(): void;
-  mobileOpen: boolean;
+  isMobileOpen: boolean;
 }
 const ToggleMenuBtn: React.FC<IProps> = ({
   toggleMenu,
-  mobileOpen,
+  isMobileOpen,
 }: IProps) => {
   return (
     <button
-      className={`menu_btn {mobileOpen ? "menu_btn_clicked" : "menu_btn"}`}
+      className={`menu_btn ${isMobileOpen ? "menu_btn_clicked" : ""}`}
       aria-label="Mobile Menu"
-      aria-expanded={mobileOpen ? "true" : "false"}
+      aria-expanded={isMobileOpen ? "true" : "false"}
       onClick={toggleMenu}
     >
       <div aria-hidden="true"></div>

@@ -10,6 +10,7 @@ div.nav_links {
   padding: 2rem 0;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
+  height: 80%;
   @media all and (min-width: $mobileM) {
     height: 100%;
     padding: 1rem 0 0 0;
@@ -32,9 +33,10 @@ ul.nav_link_list {
 li.link_item {
   position: relative;
   text-align: center;
-  width: 50px;
+   width: 60px;
   a.link {
-    width: 50px;
+    height: 50px;
+    width: 60px;
     display: inline-block;
     position: relative;
     transition: all 0.5s ease;
@@ -67,18 +69,23 @@ li.link_item {
       .link_text {
         opacity: 1;
         visibility: visible;
+        // filter: drop-shadow(0 0 3px white);
+
       }
     }
   }
   .link_icon,
   .link_text {
-    width: 50px;
-    height: 50px;
+     width: auto;
+     height: auto;
     text-align: center;
     position: absolute;
-    top: 0;
-    left: 0;
-    transition: 600ms ease;
+    // top: 0;
+    // left: 0;
+    transition: 500ms ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   i {
     font-size: 1.2rem;
@@ -101,25 +108,41 @@ li.link_item {
     }
   }
 }
-.nav_link_item {
-  @extend .link_item;
-  height: 50px;
-}
+// .nav_link_item {
+//   @extend .link_item;
+//   height: 50px;
+// }
 .nav_home_link_item {
   @extend .link_item;
   position: static;
   height: 50px;
   color: transparent;
+  margin-bottom: 1rem;
   @media all and (min-width: $mobileM) {
     position: relative;
   }
   a.link {
     color: $linkcolor;
+    top: 0;
     &.active,
     :visited {
-      color: $linkcolor;
+      .link_icon {
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+     }
+    &:hover {
+      .link_icon {
+        color: $pink_lightest !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+    }
+    .link_icon {
+      top: -8px;
     }
   }
+
   .link_icon {
     color: $linkcolor !important;
     font-weight: 700;

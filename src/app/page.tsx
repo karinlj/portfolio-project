@@ -1,4 +1,3 @@
-
 import { getHomeData as getHomeData_API } from "./portfolio_api";
 import About from "./components/about/About";
 import AboutExtra from "./components/aboutExtra/AboutExtra";
@@ -11,10 +10,12 @@ const Home: React.FC = async () => {
   const homePreamble = homeDataOutput?.fields.preamble;
   const homeTitle = homeDataOutput?.fields.title;
   const homeDescription = homeDataOutput?.fields.description;
-
   return (
     <main>
-      <section className="home_wrapper">
+      <section
+        className="home_wrapper"
+      
+      >
         <section className="content_section">
           <div className="container">
             {homeDataOutput ? (

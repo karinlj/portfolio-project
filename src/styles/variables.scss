@@ -1,18 +1,5 @@
-// $themecolorLila: #9900cc;
-// $themecolorBlue: #022c64;
-// $themecolorBlueLight: #1d7dfc;
-// $themecolorBlueSuperLight: #b4d4fd;
-// $themecolorPink: #ff9999;
-// $themecolorRed: #e60000;
 
-// $themeBorderColor: #e0e0e0;
-// $themecolor: #222;
-// $themecolorGreen: #15b756;
 
-$themeBorderRadius: 20px;
-$themeBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.8);
-$themeBoxShadowLight: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
-//   0 4px 20px 0 rgba(0; 0; 0; 0.19);
 
 $mobileXS: 480px;
 $mobileS: 576px;
@@ -23,7 +10,6 @@ $desktop: 1400px;
 $desktopL: 1600px;
 
 //bg
-// $themecolorBlue: #022c64;
 $themecolorBlue: #0063cc; // #0052b6; // #044395;
 $themecolorBlueDarker: #004db3;
 $themecolorBlueLight: #3e8ee4;
@@ -33,30 +19,30 @@ $themecolorPurplesuperlight: #fce9fb;
 $themecolorPurpleDark: #170316;
 
 $background_darkgrey: #1a1a1a;
-$background_darkgrey_darker: #0d0d0d;
 $background_light: #f9f9f9;
 //text
 $textcolor_white: #fff;
 $textcolor_dark: #404040;
 $text_gray: #737373;
-//other
+//other 
 $lightgray: #eee;
-
+$turqoise_light: #b3ffff;
+$turqoise_medium: #00e6e6;
+$turqoise_dark: #00A3A3;
+$lilacPastel: #daa6f2;
 $bluecolor: #2e9ce6;
-// $lilacPastel: #daa6f2;
-$themecolorPink: #ff9872; //#ffa299; //   #ff9999;
-$themecolorPinkDark:#ff7c4d;
+$themecolorPink: #FFB8F1; //#FF9ECF; //#ffa299; //   #ff9999; //ff99b3 //#ff9872; // #FFA3BA; 
+$themecolorPinkDark: #ff4d88;//#ff7c4d;
 
-$orange: #f68c70;
-$pink_light: #f79f87; //#f49097;
+
+
+$orange: #f68c70; //FFA8A8
 $pink_lightest: #fcd9cf; // #f8b9be;
 
-$purple_light: #e0abed;
-
-$pink_dark: #f55c7a;
-$green_light: #5decbf;
-// linkcolor: #ff66b3;
-// $linkcolor: $pink_light;
 $linkcolor: $themecolorPink;
 $linkcolorDark: $themecolorPinkDark;
 $navcolor: $themecolorPink;
+
+$themeBorderRadius: 20px;
+$themeBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.8);
+$themeBoxShadowLight: 0 2px 8px 0 rgba(0, 0, 0, 0.2);

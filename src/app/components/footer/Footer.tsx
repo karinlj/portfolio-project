@@ -1,10 +1,11 @@
 import Image from "next/image";
 import "./_footer.scss";
-import react_logo from "/public/react_logo.png";
+import next_logo from "/public/next_logo.png";
 import contentful_logo from "/public/logos_contentful.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import SocialIcons from "../navbar/SocialIcons";
 
 const Footer: React.FC = () => {
   return (
@@ -16,25 +17,29 @@ const Footer: React.FC = () => {
           position: "relative",
         }}
       >
-        <h3 className="heading_3">
-          Karin Ljunggren <br /> Front End dev.
+
+
+        <SocialIcons />
+        <h3 className="heading_3">Karin Ljunggren<span>Front End dev.</span>
+    
         </h3>
-        <section className="footer_logo_wrapper">
           <section className="footer_logo_section">
             <p>Powered by:</p>
             <div>
-              <a href="https://reactjs.org/">
+              <a href="https://nextjs.org/">
                 <Image
-                  src={react_logo}
-                  alt="React logo"
-                  className="react_logo"
-                  width={80}
+                  src={next_logo}
+                  title="Next.js"
+                  alt="Next logo"
+                  className="next_logo"
+                  width={35}
                 />
               </a>
-              <span style={{ fontSize: "1.2rem" }}>& </span>
+              <span style={{ fontSize: "1.2rem", padding: "0 1rem" }}>& </span>
               <a href="https://www.contentful.com/">
                 <Image
                   src={contentful_logo}
+                  title="Contentful"
                   alt="Contentful logo"
                   className="contentful_logo"
                   width={80}
@@ -42,7 +47,14 @@ const Footer: React.FC = () => {
               </a>
             </div>
           </section>
-          <div className="back_to_top_link">
+      
+          <section className="footer_bottom_wrapper">
+
+        <p className="footer_copy">
+          © {new Date().getFullYear()}- Karin Ljunggren
+        </p>{" "}
+
+        <div className="back_to_top_link">
             <Link href="#siteContent">
               <span className="to_top_icon">
                 {" "}
@@ -51,9 +63,6 @@ const Footer: React.FC = () => {
             </Link>
           </div>
         </section>
-        <p className="footer_copy">
-          © {new Date().getFullYear()}- Karin Ljunggren
-        </p>{" "}
       </div>
     </footer>
   );

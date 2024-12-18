@@ -9,25 +9,19 @@
   margin-bottom: 4rem;
   border-radius: $themeBorderRadius;
   box-shadow: $themeBoxShadowLight;
-  @media all and (min-width: mobileM) {
-    height: 28rem;
-  }
-  @media all and (min-width: desktopL) {
-    height: 31rem;
-  }
   &:hover {
+    transform: translateY(-4px);
     div,
     .date,
     h3,
     p {
-      color: $linkcolor;
+      color: $turqoise_dark;
       transition: 0.25s ease-in-out;
     }
     a {
       color: transparent;
     }
   }
-
   .single_project_link {
     position: absolute;
     top: 0;
@@ -60,6 +54,15 @@
   section.styled_content_container {
     padding: 1rem;
     min-height: 15rem;
+    @media all and (min-width: $mobileS) {
+      height: 16rem;
+    }
+    @media all and (min-width: $laptop) {
+      height: 18rem;
+    }
+    @media all and (min-width: $desktopL) {
+      height: 16rem;
+    }
   }
   section.styled_meta_text {
     div {
@@ -75,7 +78,7 @@
       }
       .technique {
         text-transform: lowercase;
-        color: $linkcolor;
+        color: $turqoise_dark;
         display: inline;
         font-weight: 500;
         padding: 1px 3px 0 1px;
