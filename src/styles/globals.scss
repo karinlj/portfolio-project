@@ -14,7 +14,7 @@
     .about_me_section,
     .about_me_more_section {
       border-top: 1px solid  $text_gray;;
-      color-scheme: dark;
+      color-scheme: dark; 
       background: $themecolorBlueDark;
     }
     footer {
@@ -22,7 +22,6 @@
     }
   }
 }
-
 
 :focus-visible{
   outline: 4px dotted lightgrey;
@@ -94,7 +93,6 @@ section.home_wrapper {
  
   }
 }
-
 .my-gutters {
   margin-right: 0;
   margin-left: 0;

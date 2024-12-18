@@ -1,8 +1,4 @@
 @import "../../styles/variables.scss";
-
-
-
-
 .dark {
   .skills_section {
     background-image: url(../../../public/solar_code_dark.png);
@@ -34,7 +30,6 @@
     }
     .icon {
       margin-bottom: 0.5rem;
-      //   font-size: 2.5rem;
       font-size: 2.5rem;
     }
     .text {
@@ -45,6 +40,5 @@
     font-size: 1rem;
     margin-bottom: 2rem;
     line-height: 1.4;
-    // color: ${({ theme }) => theme.text};
   }
 }

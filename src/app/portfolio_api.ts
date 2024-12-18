@@ -53,7 +53,6 @@ export const getAboutExtraData = async () => {
     }
     // console.log("aboutPageMore_response:", response);
     const dataFields = response.items[0]; //single item here
-    console.log("aboutPageMore_dataFields:", dataFields);
 
     return dataFields;
   } catch (err) {
@@ -73,7 +72,7 @@ export const getImageGrid = async () => {
       throw new Error("No OK imageGrid data response");
     }
     const dataFields = response.items; //array here
-    console.log("imageGrid_dataFields:", dataFields);
+    // console.log("imageGrid_dataFields:", dataFields);
 
     return dataFields;
   } catch (err) {
@@ -91,9 +90,8 @@ export const getProjectData = async () => {
     if (!response || !response.items) {
       throw new Error("No OK Project data response");
     }
-    console.log("project_response:", response);
+    // console.log("project_response:", response);
     const dataFields = response.items; //array here
-    console.log("project_dataFields:", dataFields);
 
     return dataFields;
   } catch (err) {
@@ -110,7 +108,7 @@ export const getPersonalProjectData = async () => {
     if (!response || !response.items) {
       throw new Error("No OK PersonalProject data response");
     }
-    console.log("personalProject_response:", response);
+    // console.log("personalProject_response:", response);
     const dataFields = response.items; //array here
     return dataFields;
   } catch (err) {
@@ -127,7 +125,7 @@ export const getSchoolItemData = async () => {
     if (!response || !response.items) {
       throw new Error("No OK SchoolItem data response");
     }
-    console.log("SchoolItem_response:", response);
+    // console.log("SchoolItem_response:", response);
     const dataFields = response.items; //array here
     return dataFields;
   } catch (err) {
@@ -144,7 +142,7 @@ export const getWorkItemData = async () => {
     if (!response || !response.items) {
       throw new Error("No OK WorkItem data response");
     }
-    console.log("WorkItem_response:", response);
+    // console.log("WorkItem_response:", response);
     const dataFields = response.items; //array here
     return dataFields;
   } catch (err) {
@@ -163,12 +161,6 @@ export const getSkillsData = async () => {
     }
     // console.log("skills_response:", response);
     const dataFields = response.items;
-    // console.log("skills_dataFields:", dataFields);
-    // console.log(
-    //   "skills_dataFields_1_skills:",
-    //   dataFields[0]?.fields.skillsList[0]
-    // );
-
     return dataFields;
   } catch (err) {
     console.log("error: ", err);

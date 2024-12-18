@@ -4,7 +4,6 @@ div.nav_links {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  // background: ${({ theme }) => theme.background_nav};
   background: $themecolorBlueDark;
   height: auto;
   padding: 2rem 0;
@@ -69,8 +68,6 @@ li.link_item {
       .link_text {
         opacity: 1;
         visibility: visible;
-        // filter: drop-shadow(0 0 3px white);
-
       }
     }
   }
@@ -80,8 +77,6 @@ li.link_item {
      height: auto;
     text-align: center;
     position: absolute;
-    // top: 0;
-    // left: 0;
     transition: 500ms ease;
     top: 50%;
     left: 50%;
@@ -89,9 +84,6 @@ li.link_item {
   }
   i {
     font-size: 1.2rem;
-    /* @media ${device.mobileM} {
-        font-size: 1.1rem;
-      } */
   }
   .link_icon {
     opacity: 1;
@@ -108,10 +100,6 @@ li.link_item {
     }
   }
 }
-// .nav_link_item {
-//   @extend .link_item;
-//   height: 50px;
-// }
 .nav_home_link_item {
   @extend .link_item;
   position: static;

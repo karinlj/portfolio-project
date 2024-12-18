@@ -17,8 +17,6 @@ const Footer: React.FC = () => {
           position: "relative",
         }}
       >
-
-
         <SocialIcons />
         <h3 className="heading_3">Karin Ljunggren<span>Front End dev.</span>
     

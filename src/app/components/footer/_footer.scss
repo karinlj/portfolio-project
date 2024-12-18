@@ -2,18 +2,17 @@
 
 .footer_section {
   clear: both;
-border-top: 2px solid $themecolorBlue;
+  border-top: 2px solid $themecolorBlue;
   padding: 1rem;
   min-height: 150px;
   @media all and (min-width: $mobileM) {
     margin-left: 6.2rem;
     padding: 3.5rem 3.5rem 1.5rem 3.5rem;
   }
-
-  .nav_link_list_social{
+  .nav_link_list_social {
     flex-direction: row;
     justify-content: flex-start;
-    .nav_social_link_item{
+    .nav_social_link_item {
       a.link {
         color: #fff;
         &.active,
@@ -21,20 +20,19 @@ border-top: 2px solid $themecolorBlue;
           color: #fff;
         }
       }
-      &:first-child{
+      &:first-child {
         margin-left: -1rem;
-
       }
     }
     @media all and (min-width: $mobileM) {
-   display: none;
+      display: none;
     }
   }
   p {
     margin-bottom: 0.5rem;
     font-size: 0.8rem;
   }
-  .heading_3 span{
+  .heading_3 span {
     display: block;
     margin-top: 0;
   }
@@ -44,9 +42,6 @@ border-top: 2px solid $themecolorBlue;
   margin-top: 2rem;
   display: flex;
   justify-content: space-between;
-  @media all and (min-width: $mobileM) {
-    // float: right;
-  }
 }
 .back_to_top_link {
   float: right;
@@ -89,11 +84,9 @@ border-top: 2px solid $themecolorBlue;
     &.contentful_logo {
       width: 2rem;
       height: auto;
-
     }
   }
 }
-
 p.footer_copy {
   margin-top: 2rem;
 }

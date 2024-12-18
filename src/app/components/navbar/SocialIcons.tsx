@@ -49,8 +49,6 @@ const SocialIcons: React.FC = () => {
                 <FontAwesomeIcon icon={item.icon} />
               </span>
 
-              {/* <i className={`${item.icon} link_icon`} aria-hidden="true"></i> */}
-
               <span className="link_text" data-testid="textSpan">
                 {item.text}
               </span>

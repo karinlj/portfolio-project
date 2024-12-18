@@ -4,10 +4,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faHome,
-  faUser,
   faGraduationCap,
-  faHeart,
   faFolderOpen,
   faFolderClosed,
   faFileLines,
@@ -25,26 +22,11 @@ interface IlistItem {
 }
 
 const linkList: IlistItem[] = [
-  // {
-  //   path: "/",
-  //   icon: faHome,
-  //   text: "Home",
-  // },
-  // {
-  //   path: "/about",
-  //   icon: faUser,
-  //   text: "About Me",
-  // },
   {
     path: "/skills",
     icon: faGraduationCap,
     text: "Skills",
   },
-  // {
-  //   path: "/workWays",
-  //   icon: faHeart,
-  //   text: "How I work",
-  // },
   {
     path: "/projects",
     icon: faFolderClosed,

@@ -4,15 +4,11 @@ import { getAboutData } from "../../portfolio_api";
 import "./_about.scss";
 import Image from "next/image";
 import { IImage } from "../../porfolio_types";
-import me_pict from "/public/me3.jpg";
 import { ReactNode } from "react";
 
 const About: React.FC = async () => {
   const aboutData = await getAboutData();
 
-  if (!aboutData) {
-    return <div>Loading...</div>;
-  }
   const heading = aboutData?.fields.heading as ReactNode;
   const content = aboutData?.fields.content!;
   const mePict = aboutData?.fields.mePict! as IImage;
@@ -20,6 +16,9 @@ const About: React.FC = async () => {
   const mePictSrc = `https:${mePict.fields.file.url}`;
   const mePictTitle = mePict.fields.title;
 
+  if (!aboutData) {
+    return <div>Loading...</div>;
+  }
   return (
     <section className="about_me_section">
       <div className="container">

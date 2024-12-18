@@ -1,5 +1,4 @@
 "use client";
-// import { client } from "@/client";
 import "./_navbar.scss";
 import "./_navlinks.scss";
 import { useState, useEffect } from "react";
@@ -41,15 +40,12 @@ const NavBar: React.FC = () => {
           <span className="link_icon">K</span>      
         </Link>
       </li>
-
       <ToggleMenuBtn toggleMenu={toggleMenu} isMobileOpen={isMobileOpen} />
-
       <nav
         className={`navbar_mobile ${isMobileOpen ? "navbar_mobile_open" : ""}`}
       >
         <Navlinks clickLink={clickLink} />
       </nav>
-
       <nav className="navbar_bigscreen">
         <Navlinks />
       </nav>

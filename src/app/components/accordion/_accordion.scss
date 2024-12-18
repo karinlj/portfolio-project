@@ -5,7 +5,6 @@
   border: none;
   padding: 0.4rem;
   border: 1px solid $text_gray;
-  // border: 1px solid ${({ theme }) => theme.border_color_inverse};
   margin: 0.5rem auto;
   border-radius: $themeBorderRadius;
   width: 100%;
@@ -22,7 +21,6 @@
       margin-left: 0.5rem;
       height: 1rem;
       color: $textcolor_dark;
-      // color: ${({ theme }) => theme.text_inverse};
       padding: 2px;
       &:hover {
         color: $linkcolor;
@@ -53,13 +51,11 @@
     }
   }
 }
-
 .accordion_heading {
   font-size: 0.8rem;
   font-weight: 500;
   margin-bottom: 0;
   color: $textcolor_dark;
-  // color: ${({ theme }) => theme.text_inverse};
   @media all and (min-width: $mobileM) {
     font-size: 0.9rem;
   }

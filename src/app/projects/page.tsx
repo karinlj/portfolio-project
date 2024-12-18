@@ -58,9 +58,6 @@ const Projects: React.FC = () => {
           <Filter displayItems={displayItems} activeFilter={activeFilter} />
 
           <div className="row my-gutters">
-            {/* {loading && (
-                  <StyledContentLoading>...Loading</StyledContentLoading>
-                )} */}
             {projectData &&
               //if project.techniques includes name from checkedTecniqueNames
               projectData.map((project, index) => {

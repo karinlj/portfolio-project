@@ -1,8 +1,5 @@
 @import "../../styles/variables.scss";
 
-.resume_section {
-
-}
 .curriculum_bg_wrapper {
   margin-top: 1rem;
   position: relative;
@@ -23,7 +20,6 @@
 .curriculum_title {
   font-size: 1.3rem;
   color: $textcolor_dark;
-  // color: ${({ theme }) => theme.text_inverse};
   @media all and (min-width: $mobileM) {
     font-size: 1.6rem;
   }

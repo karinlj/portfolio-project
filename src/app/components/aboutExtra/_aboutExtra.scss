@@ -8,13 +8,6 @@
       padding-left: 5px;
     }
   }
-  @media all and (min-width: $laptopL) {
-    // .col-12 {
-    //   padding-right: 15px;
-    //   padding-left: 15px;
-    // }
-  }
- 
 }
 .styled_info_box {
   display: flex;
@@ -30,7 +23,6 @@
 
 .styled_reload_btn {
   cursor: pointer;
-  // margin-left: 2rem;
   background: $themecolorBlueDarker;
   border: none;
   padding: 0.5rem 0.6rem;
@@ -39,7 +31,6 @@
   display: none;
   font-size: 1.5rem;
   @media all and (min-width: $mobileM) {
-    // display: inline-block ;
     display: inline;
   }
   @media all and (min-width: $laptopL) {
@@ -50,7 +41,6 @@
   }
 
   &:hover {
-    /* filter: drop-shadow(0 0 3px ${colors.background_darkgrey}); */
     filter: drop-shadow(0 0 3px white);
     transition: all 1s ease;
   }
@@ -70,7 +60,6 @@
   @media all and (min-width: $mobileS) {
     height: clamp(30rem,40rem, 45rem);  
     padding: 1rem 1rem 7rem 1rem;
-
   }
   @media all and (min-width: $mobileM) {
     padding: 0.5rem 0.5rem 3.5rem 0.5rem;
@@ -84,21 +73,10 @@
   }
 
   img {
-    // height: clamp(4rem, 26vw, 26rem);
     object-fit: cover;
     // object-position: 50% 70%;
     width: 100%;
     border-radius: 25px;
-    // height: clamp(20px, 24vh, 700px);
-    // // @media all and (min-width: $mobileS) {
-    // //   height: clamp(15rem, 60vw, 20rem);
-    // // }
-    // @media all and (min-width: $mobileM) {
-    //   max-height: clamp(4rem, 23vw, 26rem);
-    // }
-    // @media all and (min-width: $laptopL) {
-    //   max-height: clamp(4rem, 26vw, 26rem);
-    //   min-height: clamp(4rem, 26vw, 26rem);
-    // }
+
   }
 }

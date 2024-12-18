@@ -20,14 +20,10 @@ const Resume: React.FC = () => {
     TypeSchoolItemSkeleton[] | null
   >(null);
 
-  const [loadingWorkItems, setLoadingWorkItems] = useState(false);
-  const [loadingSchoolItems, setLoadingSchoolItems] = useState(false);
-
   const getWorkItems = async () => {
     try {
       const data = await getWorkItemData_API();
       setWorkItems(data as any);
-      setLoadingWorkItems(false);
     } catch (error) {
       console.error("Error fetching WorkItem data:", error);
     }
@@ -37,19 +33,18 @@ const Resume: React.FC = () => {
     try {
       const data = await getSchoolItemData_API();
       setSchoolItems(data as any);
-      setLoadingSchoolItems(false);
     } catch (error) {
       console.error("Error fetching SchoolItems data:", error);
     }
   };
 
   useEffect(() => {
-    setLoadingWorkItems(true);
     getWorkItems();
-    setLoadingSchoolItems(true);
     getSchoolItems();
   }, []);
-
+  if (!schoolItems || !workItems) {
+    return <div>Loading...</div>;
+  }
   return (
     <main>
       <section className="resume_section">
@@ -64,7 +59,6 @@ const Resume: React.FC = () => {
                   <h2 className="small_heading resume">Work Experience</h2>
 
                   <section>
-                    {loadingWorkItems && <p>...Loading</p>}
                     {workItems &&
                       workItems.map((workEntry, i) => {
                         return (
@@ -85,7 +79,6 @@ const Resume: React.FC = () => {
                 <div>
                   <h2 className="small_heading resume">Education</h2>
                   <section>
-                    {loadingSchoolItems && <p>...Loading</p>}
                     {schoolItems &&
                       schoolItems.map((schoolEntry, i) => {
                         return (
