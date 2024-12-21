@@ -5,7 +5,7 @@
 
 Portfolio project using Next.js, Typescript, SCSS and Contentful.
 
-![Screenshot](/public/screenshot_24.jpg?raw=true "Screenshot")
+![Screenshot](/public/screenshot_24.jpg "Screenshot")
 
 ##### Url: http://karinljunggren.com/
 
