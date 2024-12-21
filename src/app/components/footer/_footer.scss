@@ -14,10 +14,10 @@
     justify-content: flex-start;
     .nav_social_link_item {
       a.link {
-        color: #fff;
+        color: $textcolor_white;
         &.active,
         :visited {
-          color: #fff;
+          color: $textcolor_white;
         }
       }
       &:first-child {
@@ -57,7 +57,7 @@
     filter: none;
   }
   a {
-    color: #fff;
+    color: $textcolor_white;
   }
 }
 .footer_logo_section {
