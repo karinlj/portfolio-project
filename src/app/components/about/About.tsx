@@ -17,7 +17,7 @@ const About: React.FC = async () => {
   const mePictTitle = mePict.fields.title;
 
   if (!aboutData) {
-    return <div>Loading...</div>;
+    return <div className="loading">Loading ...</div>;
   }
   return (
     <section className="about_me_section">

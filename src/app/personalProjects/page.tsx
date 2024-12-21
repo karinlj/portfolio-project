@@ -48,7 +48,7 @@ const PersonalProject: React.FC = () => {
   }, []);
 
   if (!projectData) {
-    return <div>Loading...</div>;
+    return <div className="loading">Loading ...</div>;
   }
   return (
     <main>

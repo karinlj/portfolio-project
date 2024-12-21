@@ -5,7 +5,7 @@ import AboutExtra from "./components/aboutExtra/AboutExtra";
 const Home: React.FC = async () => {
   const homeDataOutput = await getHomeData_API();
   if (!homeDataOutput) {
-    return <div>Loading ...</div>;
+    return <div className="loading">Loading ...</div>;
   }
   const homePreamble = homeDataOutput?.fields.preamble;
   const homeTitle = homeDataOutput?.fields.title;

@@ -47,7 +47,7 @@ const Projects: React.FC = () => {
   }, [checkedTecniqueNames]);
 
   if (!projectData) {
-    return <div>Loading...</div>;
+    return <div className="loading">Loading ...</div>;
   }
   return (
     <main>

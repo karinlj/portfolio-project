@@ -85,7 +85,7 @@ const AboutExtra: React.FC = () => {
 
   // Make sure data is not undefined
   if (!aboutExtraData || !imageGrid) {
-    return <div>Loading...</div>;
+    return <div className="loading">Loading ...</div>;
   }
   const heading = aboutExtraData?.fields.heading as ReactNode;
   const description = aboutExtraData?.fields.description as ReactNode;

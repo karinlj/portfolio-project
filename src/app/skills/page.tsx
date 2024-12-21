@@ -17,7 +17,7 @@ import { getSkillsData as getSkillsData_API } from "../portfolio_api";
 const Skills: React.FC = async () => {
   const skillsData = await getSkillsData_API();
   if (!skillsData) {
-    return <div>Loading ...</div>;
+    return <div className="loading">Loading ...</div>;
   }
 
   const devIcons: IconDefinition[] = [

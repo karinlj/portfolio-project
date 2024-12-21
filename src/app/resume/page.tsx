@@ -43,7 +43,7 @@ const Resume: React.FC = () => {
     getSchoolItems();
   }, []);
   if (!schoolItems || !workItems) {
-    return <div>Loading...</div>;
+    return <div className="loading">Loading ...</div>;
   }
   return (
     <main>
