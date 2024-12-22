@@ -38,7 +38,7 @@ const AboutExtra: React.FC = () => {
     }
   };
 
-  let cardsRow  = [];
+  let cardsRow  = [] as any;
 
     if (imageGrid!) {
       cardsRow = imageGrid.map((row, i) => {
