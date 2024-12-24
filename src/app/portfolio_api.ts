@@ -7,7 +7,6 @@ import {
   TypePersonalProjectSkeleton,
   TypeWorkItemSkeleton,
   TypeSchoolItemSkeleton,
-  TypeSkillNewSkeleton,
   TypeSkills24Skeleton,TypeImageGridSkeleton
 } from "./porfolio_types";
 

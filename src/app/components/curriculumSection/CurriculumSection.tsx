@@ -1,6 +1,7 @@
 import Accordion from "../accordion/Accordion";
 import { TypeResumeFields } from "../../porfolio_types";
 import "./_curriculumSection.scss";
+import { Key } from "react";
 
 const CurriculumSection: React.FC<TypeResumeFields> = ({ fields }) => {
   const { title, titleLink, date, description, siteList, subItemList } = fields;
@@ -39,7 +40,7 @@ const CurriculumSection: React.FC<TypeResumeFields> = ({ fields }) => {
 
       {/* course_items accordion */}
       {subItemList &&
-        (subItemList as any).map((item, i) => {
+        (subItemList as any).map((item: { heading: string; content: string; }, i: Key | null | undefined) => {
           return (
             <>
               <Accordion

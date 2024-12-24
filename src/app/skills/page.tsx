@@ -5,6 +5,8 @@ import {
   faCode,
   faEye,
   faCircleInfo,
+  faUserGroup,
+  faUserCheck
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFigma,
@@ -15,10 +17,12 @@ import {
   faVuejs,
   faGitSquare,
   faSquareJs,
+  faJira,
+  faMicrosoft,
+  faCss3Alt
 } from "@fortawesome/free-brands-svg-icons";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { getSkillsData as getSkillsData_API } from "../portfolio_api";
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, AwaitedReactNode, Key } from "react";
 
 const Skills: React.FC = async () => {
   const skillsData = await getSkillsData_API();
@@ -27,6 +31,7 @@ const Skills: React.FC = async () => {
   }
 
   const devIcons: IconDefinition[] = [
+    faCode,
     faFigma,
     faHtml5,
     faSass,
@@ -36,22 +41,35 @@ const Skills: React.FC = async () => {
     faGitSquare,
     faSquareJs,
     faPuzzlePiece,
-    faCode,
     faGitSquare,
     faEye,
     faCircleInfo,
+    faJira,
+    faMicrosoft,
+    faUserGroup,
+    faUserCheck,
+    faCss3Alt,
   ];
 
-  const getIcon = (iconName: string) => {
-    const icon = devIcons.find((item) => {
-      return item.iconName === iconName;
-    });
-    if (icon === undefined) {
-      throw new Error(
-        `Expected 'icon' to be defined, but received ${icon}`
-      );
+  type listItem = {
+    icon?: string;
+    text: string;
+  };
+
+  const getIcon = (iconName?: listItem["icon"]) => {
+    let icon;
+    if (iconName) {
+      icon = devIcons.find((item) => {
+        return item.iconName === iconName;
+      });
+    } else {
+      icon = faCode;
     }
-      return icon;
+
+    if (icon === undefined) {
+      throw new Error(`Expected 'icon' to be defined, but received ${icon}`);
+    }
+    return icon;
   };
 
   return (
@@ -62,7 +80,7 @@ const Skills: React.FC = async () => {
       <section className="content_section">
         <div className="container">
           <div className="row justify-content-between">
-            <div className="col-12 col-lg-10 col-xl-12">
+            <div className="col-12 col-lg-10">
               <div className="skills_row">
                 {skillsData &&
                   skillsData?.map((skillsDataItem) => {
@@ -74,10 +92,10 @@ const Skills: React.FC = async () => {
                         <div className="row box_row">
                           {skillsDataItem.fields.skillsList &&
                             (skillsDataItem.fields.skillsList as any).map(
-                              (listItem: { icon: string; text: string | number | bigint | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | null | undefined; }, index: Key | null | undefined) => {
+                              (listItem: listItem, index: number) => {
                                 return (
                                   <div
-                                    className="col-4 col-lg-2 col-xl-1"
+                                    className="col-4 col-lg-2"
                                     key={index}
                                   >
                                     <div className="skills_box_item">

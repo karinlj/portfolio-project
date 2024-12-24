@@ -9,7 +9,7 @@ const SingleProject: React.FC<TypeProjectComponentFields> = ({ project }) => {
 
   const projectLink = link! as any;
   const projectImage = image! as IImage;
-  const projectTechniques = techniques! as any;
+  const projectTechniques = techniques! as string[];
   const projectReleaseDate = releaseDate as any;
 
   const src = `https:${projectImage.fields.file.url}`;
@@ -39,7 +39,7 @@ const SingleProject: React.FC<TypeProjectComponentFields> = ({ project }) => {
         <h3>{title}</h3>
         <section className="styled_meta_text">
           <div className="techniques">
-            {projectTechniques.map((technique, index) => {
+          {projectTechniques && projectTechniques.map((technique: string, index:number) => {
               return (
                 <div key={index} className="technique">
                   {technique}
