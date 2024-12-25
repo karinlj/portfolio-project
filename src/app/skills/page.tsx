@@ -24,7 +24,7 @@ import {
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { getSkillsData as getSkillsData_API } from "../portfolio_api";
 
-const Skills: React.FC = async () => {
+const Skills = async () => {
   const skillsData = await getSkillsData_API();
   if (!skillsData) {
     return <div className="loading">Loading ...</div>;

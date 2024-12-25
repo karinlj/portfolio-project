@@ -6,7 +6,7 @@ import Image from "next/image";
 import { IImage } from "../../porfolio_types";
 import { ReactNode } from "react";
 
-const About: React.FC = async () => {
+const About= async () => {
   const aboutData = await getAboutData();
 
   const heading = aboutData?.fields.heading as ReactNode;
