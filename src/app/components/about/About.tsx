@@ -4,9 +4,9 @@ import { getAboutData } from "../../portfolio_api";
 import "./_about.scss";
 import Image from "next/image";
 import { IImage } from "../../porfolio_types";
-import { ReactNode } from "react";
+import { ReactElement, ReactNode } from "react";
 
-const About= async () => {
+const About: any = async () => {
   const aboutData = await getAboutData();
 
   const heading = aboutData?.fields.heading as ReactNode;

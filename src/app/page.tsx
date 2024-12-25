@@ -2,7 +2,7 @@ import { getHomeData as getHomeData_API } from "./portfolio_api";
 import About from "./components/about/About";
 import AboutExtra from "./components/aboutExtra/AboutExtra";
 
-const Home: React.FC = async () => {
+const Home= async () => {
   const homeDataOutput = await getHomeData_API();
   if (!homeDataOutput) {
     return <div className="loading">Loading ...</div>;
