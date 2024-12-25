@@ -21,11 +21,12 @@
     "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18",
-    "sass": "^1.74.1"
+    "sass": "^1.74.1",
+    "@types/react": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "^18",
+ 
     "@types/react-dom": "^18",
     "contentful-management": "^11.31.8",
     "dotenv": "^16.4.5",
