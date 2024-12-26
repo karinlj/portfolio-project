@@ -51,6 +51,8 @@
     }
   }
   .projects_link {
+    display: inline-block;
+    padding-bottom: 0.5rem;
     color: $linkcolor;
     transition: all 1s ease;
     &:hover {

@@ -55,7 +55,7 @@ const About: any = async () => {
             </div>
           </div>
           <p className="home_links">
-            Take a look at my
+            Take a look at my {" "}
             <Link href={`/projects`} className="projects_link">
               {" "}
               Client Projects
