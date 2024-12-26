@@ -4,9 +4,11 @@ import { getAboutData } from "../../portfolio_api";
 import "./_about.scss";
 import Image from "next/image";
 import { IImage } from "../../porfolio_types";
-import { ReactElement, ReactNode } from "react";
+import {  ReactNode } from "react";
+import Link from "next/link";
 
-const About: any = async () => {
+
+const About:any = async () => {
   const aboutData = await getAboutData();
 
   const heading = aboutData?.fields.heading as ReactNode;
@@ -53,6 +55,14 @@ const About: any = async () => {
               </div>
             </div>
           </div>
+          <Link
+            href={`/projects`}
+            className="projects_link"
+          >
+            {" "}
+           Take a look at my client Projects
+          </Link>
+
         </div>
       </section>
     </section>

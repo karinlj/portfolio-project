@@ -3,6 +3,7 @@
 .about_me_more_section {
   background: $themecolorBlue;
   @media all and (min-width: $mobileM) {
+    padding-bottom: 10rem;
     .col-12 {
       padding-right: 5px;
       padding-left: 5px;

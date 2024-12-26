@@ -2,6 +2,15 @@
 
 .about_me_section {
   background: $themecolorBlue;
+  .content_section {
+    .row {
+      flex-direction: column-reverse;
+      @media all and (min-width: $laptop) {
+        flex-direction: row;
+      }
+    }
+  }
+
   hr {
     visibility: hidden;
     padding: 1rem 0;
@@ -9,15 +18,15 @@
   .styled_card.pict {
     margin-top: 2rem;
     @media all and (min-width: $mobileS) {
-      height: clamp(30rem,35rem, 40rem);
+      height: clamp(30rem, 35rem, 40rem);
       padding: 1rem 1rem 7rem 1rem;
     }
     @media all and (min-width: $mobileM) {
       padding: 1rem 1rem 7rem 1rem;
-     }
+    }
     @media all and (min-width: $laptop) {
       margin-top: 0;
-      height: clamp(25rem,30rem, 35rem);
+      height: clamp(25rem, 30rem, 35rem);
       padding: 1rem 1rem 7rem 1rem;
     }
   }
@@ -31,6 +40,22 @@
     margin-top: 1rem;
     @media all and (min-width: $laptop) {
       font-size: 1.1rem;
+    }
+  }
+
+  .projects_link {
+    color: $linkcolor;
+    transition: all 1s ease;
+    display: block;
+    padding-top: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    @media all and (min-width: $mobileM) {
+      font-size: 1.3rem;
+    }
+    &:hover {
+      filter: drop-shadow(0 0 3px white);
     }
   }
 }
