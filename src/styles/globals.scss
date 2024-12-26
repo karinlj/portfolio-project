@@ -20,13 +20,11 @@
     }
   }
 }
-
 :focus-visible{
   outline: 4px dotted lightgrey;
   outline-offset: 5px;
   border-radius: none;
 }
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -73,13 +71,11 @@ section.home_wrapper,
     background-image: url(../../public/flower_dark.png);
   }
 }
-
 section.home_wrapper {
   min-height: 75vh;
   background-image: url(../../public/flower.png);
   background-size:auto;
   background-repeat: repeat;
-
   @media all and (min-width: $mobileM) {
     min-height: 90vh;
   }
@@ -250,11 +246,11 @@ section {
   }
 }
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   width: 100%;
   margin: 0 auto;
   @media all and (min-width: 1700px) {
-    max-width: 1500px;
+    max-width: 1400px;
   }
 }
 

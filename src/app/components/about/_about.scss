@@ -43,17 +43,16 @@
     }
   }
 
+  .home_links {
+    padding-top: 2rem;
+    font-size: 1.1rem;
+    @media all and (min-width: $mobileM) {
+       font-size: 1.3rem;
+    }
+  }
   .projects_link {
     color: $linkcolor;
     transition: all 1s ease;
-    display: block;
-    padding-top: 2rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    @media all and (min-width: $mobileM) {
-      font-size: 1.3rem;
-    }
     &:hover {
       filter: drop-shadow(0 0 3px white);
     }
