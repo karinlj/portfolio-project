@@ -57,7 +57,16 @@
     @media all and (min-width: $mobileS) {
       height: 16rem;
     }
+    @media all and (min-width: $mobileM) {
+      height: 18rem;
+    }
     @media all and (min-width: $laptop) {
+      height: 20rem;
+    }
+    @media all and (min-width: $laptopL) {
+      height: 20rem;
+    }
+    @media all and (min-width: $desktop) {
       height: 18rem;
     }
     @media all and (min-width: $desktopL) {
@@ -68,7 +77,7 @@
     div {
       display: flex;
       flex-wrap: wrap;
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       margin-right: 0.5rem;
       color: $text_gray;
       span {
@@ -84,7 +93,7 @@
         padding: 1px 3px 0 1px;
         margin-bottom: 0;
         margin-right: 5px;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
       }
     }
     .date {
@@ -96,7 +105,7 @@
   }
   .project_description {
     margin: 0.5rem 0;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     line-height: 1.7;
   }
 }

@@ -5,18 +5,11 @@
   width: 100%;
   padding: 0.5rem 0;
   color: $textcolor_dark;
-  // p {
-  //   color: ${({ theme }) => theme.text_inverse};
-  // }
   a {
     cursor: pointer;
-    // color: ${({ theme }) => theme.text_inverse};
     &:hover {
       color: $linkcolor;
       transition: all 0.5s ease;
-      // transition: all 1s ease;
-      // text-decoration: none;
-      // color: ${colors.linkcolor};
     }
   }
   .date {
@@ -27,6 +20,9 @@
   }
   .description {
     font-size: 0.9rem;
+    @media all and (min-width: $mobileM) {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -34,7 +30,6 @@
   font-size: 1rem;
   letter-spacing: 0.8px;
   margin-bottom: 0rem;
-  // color: ${({ theme }) => theme.text_inverse};
 }
 
 .styled_site_item {
