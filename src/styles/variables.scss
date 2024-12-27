@@ -18,8 +18,8 @@ $background_darkgrey: #1a1a1a;
 $background_light: #f9f9f9;
 //text
 $textcolor_white: #fff;
-$textcolor_dark: #404040;
-$text_gray: #737373;
+$textcolor_dark: #000c1a;
+$textcolor_lighter: #003066;
 //other 
 $lightgray: #eee;
 $turqoise_light: #b3ffff;
@@ -37,3 +37,5 @@ $navcolor: $themecolorPink;
 $themeBorderRadius: 20px;
 $themeBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.8);
 $themeBoxShadowLight: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+
+$small_text: 0.8rem

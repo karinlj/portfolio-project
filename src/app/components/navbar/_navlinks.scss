@@ -95,7 +95,7 @@ li.link_item {
     visibility: hidden;
     margin: 0;
     @media all and (min-width: $mobileM) {
-      font-size: 0.8rem;
+      font-size: $small_text;
     }
   }
 }
@@ -137,7 +137,7 @@ li.link_item {
     line-height: 1;
     width: 25px;
     top: 0.6rem;
-    left: 0.8rem;
+    left: $small_text;
     @media all and (min-width: $mobileM) {
       width: 50px;
       top: 0;

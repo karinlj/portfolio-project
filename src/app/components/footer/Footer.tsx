@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
         </p>{" "}
 
         <div className="back_to_top_link">
-            <Link href="#siteContent">
+            <Link href="#nav">
               <span className="to_top_icon">
                 {" "}
                 <FontAwesomeIcon icon={faAngleUp} aria-label="Top of page" />

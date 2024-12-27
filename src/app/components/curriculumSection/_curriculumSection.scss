@@ -16,11 +16,12 @@
     display: block;
     padding: 0.2rem 0 0.5rem 0;
     margin: 0;
-    font-size: 0.8rem;
+    font-size: $small_text;
+    color: $textcolor_lighter;
   }
   .description {
     font-size: 0.9rem;
-    @media all and (min-width: $mobileM) {
+    @media all and (min-width: $desktop) {
       font-size: 1rem;
     }
   }
@@ -34,7 +35,7 @@
 
 .styled_site_item {
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: $small_text;
   letter-spacing: 0.5px;
   a {
     position: relative;

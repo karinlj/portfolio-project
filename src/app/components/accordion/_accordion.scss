@@ -4,7 +4,7 @@
   background: transparent;
   border: none;
   padding: 0.4rem;
-  border: 1px solid $text_gray;
+  border: 1px solid $textcolor_lighter;
   margin: 0.5rem auto;
   border-radius: $themeBorderRadius;
   width: 100%;
@@ -30,7 +30,7 @@
   .cv_content {
     margin-bottom: 0;
     padding: 0rem 1rem 0rem 2rem;
-    font-size: 95%;
+    font-size: $small_text;
     max-height: 0;
     overflow-y: hidden;
     transition: all 0.4s ease-out;
@@ -52,11 +52,6 @@
   }
 }
 .accordion_heading {
-  font-size: 0.8rem;
   font-weight: 500;
   margin-bottom: 0;
-  color: $textcolor_dark;
-  @media all and (min-width: $mobileM) {
-    font-size: 0.9rem;
-  }
 }

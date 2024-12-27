@@ -68,8 +68,8 @@ const PersonalProject: React.FC = () => {
                   checkedTecniqueNames
                 ).length > 0 ? (
                   <div
-                    className="col-12 col-sm-6 col-lg-4 col-xl-3"
-                    key={index}
+                  className="col-12 col-sm-6 col-lg-4 col-xxl-3"
+                  key={index}
                   >
                     <SingleProject project={project} />
                   </div>

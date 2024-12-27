@@ -10,13 +10,11 @@
       }
     }
   }
-
   hr {
     visibility: hidden;
     padding: 1rem 0;
   }
   .styled_card.pict {
-    margin-top: 2rem;
     @media all and (min-width: $mobileS) {
       height: clamp(30rem, 35rem, 40rem);
       padding: 1rem 1rem 7rem 1rem;
@@ -35,7 +33,7 @@
     right: 0;
   }
   .me_pict_caption {
-    color: $textcolor_dark;
+    color: $textcolor_lighter;
     font-size: 1rem;
     margin-top: 1rem;
     @media all and (min-width: $laptop) {
