@@ -69,15 +69,43 @@ section.home_wrapper,
   }
 }
 .dark {
-  section.home_wrapper {
-    background-image: url(../../public/flower_dark.png);
+  section.home_wrapper, .project_section {
+    background:
+    linear-gradient(-90deg, rgba(0, 48, 102, .3) 1px, transparent 1px),
+    linear-gradient(rgba(0, 48, 102, .3) 1px, transparent 1px),
+    $themecolorBlueDark;
+    background-size:
+  30px 30px,
+  30px 30px,
+  80px 80px,
+  80px 80px,
+  80px 80px,
+  80px 80px,
+  80px 80px,
+  80px 80px;
+  background-color:   $themecolorBlueDark;
   }
 }
-section.home_wrapper {
+section.home_wrapper, .project_section {
+  background:
+  linear-gradient(-90deg, rgba(0, 12, 26, .08) 1px, transparent 1px),
+  linear-gradient(rgba(0,12, 26,.08) 1px, transparent 1px),
+  $themecolorBlueDarker;
+background-size:
+  30px 30px,
+  30px 30px,
+  80px 80px,
+  80px 80px,
+  80px 80px,
+  80px 80px,
+  80px 80px,
+  80px 80px;
+ background-color:   $themecolorBlueDarker;
+
   min-height: 75vh;
-  background-image: url(../../public/flower.png);
-  background-size:auto;
-  background-repeat: repeat;
+  // background-image: url(../../public/grid_bg.jpg);
+  // background-size:auto;
+  // background-repeat: repeat;
   @media all and (min-width: $mobileM) {
     min-height: 90vh;
   }
