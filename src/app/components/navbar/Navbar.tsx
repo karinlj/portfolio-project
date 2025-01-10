@@ -37,7 +37,7 @@ const NavBar: React.FC = () => {
         <Link href="/" onClick={clickLink} className={`link ${
                   pathName === `/` ? "active" : ""
                 }`}>
-          <span className="link_icon">K</span>      
+          <span className="link_icon">K.</span>      
         </Link>
       </li>
       <ToggleMenuBtn toggleMenu={toggleMenu} isMobileOpen={isMobileOpen} />

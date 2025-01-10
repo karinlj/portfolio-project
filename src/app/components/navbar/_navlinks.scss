@@ -109,6 +109,9 @@ li.link_item {
     position: relative;
   }
   a.link {
+    position: absolute !important;
+    top: 0;
+    left: 0;
     color: $linkcolor;
     top: 0;
     &.active,
@@ -124,9 +127,6 @@ li.link_item {
         opacity: 1 !important;
         visibility: visible !important;
       }
-    }
-    .link_icon {
-      top: -8px;
     }
   }
 
