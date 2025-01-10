@@ -110,7 +110,7 @@ li.link_item {
   }
   a.link {
     top: -30px;
-    left: 3px;
+    left: 3home_wrapperpx;
     color: $linkcolor;
     @media all and (min-width: $mobileM) {
       top: -10px;
