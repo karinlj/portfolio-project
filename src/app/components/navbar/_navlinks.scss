@@ -109,11 +109,13 @@ li.link_item {
     position: relative;
   }
   a.link {
-    position: absolute !important;
-    top: 0;
-    left: 0;
+    top: -30px;
+    left: 3px;
     color: $linkcolor;
-    top: 0;
+    @media all and (min-width: $mobileM) {
+      top: -10px;
+      left: 5px;
+    }
     &.active,
     :visited {
       .link_icon {
@@ -131,6 +133,9 @@ li.link_item {
   }
 
   .link_icon {
+    //  position: absolute !important;
+    // top: -6px;
+    // left: 0;
     color: $linkcolor !important;
     font-weight: 700;
     font-size: 2.8rem !important;

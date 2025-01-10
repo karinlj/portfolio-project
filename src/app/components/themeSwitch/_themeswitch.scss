@@ -3,8 +3,8 @@
 .theme_switch {
     position: absolute;
     z-index: 1000;
-    top: 12px;
-    right: 4rem;
+    top: 15px;
+    right: 4.5rem;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -15,7 +15,8 @@
     padding: 0.5rem; 
     transition:  0.3s all ease-in;
     @media all and (min-width: $mobileM) {
-        right: 1.1rem;
+      top: 1.6rem;
+        right: 1.6rem;
     }
     &.dark {
       background: $themecolorBlueDarker;
