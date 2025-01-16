@@ -19,7 +19,7 @@ export const getHomeData = async () => {
       throw new Error("No OK Home data response");
     }
     // console.log("home_response:", response);
-    const dataFields = response.items[0];
+    const dataFields = response.items[1];
     return dataFields;
   } catch (err) {
     console.log("error: ", err);
@@ -35,7 +35,7 @@ export const getAboutData = async () => {
       throw new Error("No OK About data response");
     }
     // console.log("about_response:", response);
-    const dataFields = response.items[0];
+    const dataFields = response.items[1];
     return dataFields;
   } catch (err) {
     console.log("error: ", err);

@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
           <section className="footer_bottom_wrapper">
 
         <p className="footer_copy">
-          © {new Date().getFullYear()}- Karin Ljunggren
+          © {new Date().getFullYear()} - Karin Ljunggren
         </p>{" "}
 
         <div className="back_to_top_link">

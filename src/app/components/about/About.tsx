@@ -41,6 +41,8 @@ const About: any = async () => {
             </div>
             <div className="col-12 col-lg-6 col-xl-4">
               <div className="styled_card pict">
+              {aboutData ? (
+                <>
                 <Image
                   src={mePictSrc}
                   alt="picture of Karin"
@@ -51,6 +53,10 @@ const About: any = async () => {
                   style={{ width: "100%", height: "100%" }}
                 />
                 <p className="me_pict_caption">{mePictTitle}</p>
+                </>
+              ) : (
+                ""
+              )}
               </div>
             </div>
           </div>
