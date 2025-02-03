@@ -100,21 +100,12 @@ li.nav_home_link_item {
 }
 //mobile
 .navbar_mobile {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // justify-content: center;
-  height: 100%;
   position: fixed;
   right: 0;
   top:0;
-  width: 100%;
   z-index: 100;
   pointer-events: none;
   padding-top: 6rem;
-
-
-
   opacity: 0;
   width: 100vw;
   height: 100vh;
@@ -123,10 +114,8 @@ li.nav_home_link_item {
   }
   //toggle open menu
   &.navbar_mobile_open {
-
     animation: transitionIn  800ms cubic-bezier(0.39, 0.575, 0.565, 1) both;
     pointer-events: all;
-
   }
 }
 

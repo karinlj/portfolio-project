@@ -82,10 +82,10 @@ const Resume: React.FC = () => {
                     {schoolItems &&
                       schoolItems.map((schoolEntry, i) => {
                         return (
-                          <div>
+                          <div key={i}>
                             <CurriculumSection
                               fields={schoolEntry.fields}
-                              key={i}
+                            
                             />
                           </div>
                         );

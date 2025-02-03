@@ -42,13 +42,13 @@ const CurriculumSection: React.FC<TypeResumeFields> = ({ fields }) => {
       {subItemList &&
         (subItemList as any).map((item: { heading: string; content: string; }, i: Key | null | undefined) => {
           return (
-            <>
+            <div key={i}>
               <Accordion
-                key={i}
+               
                 heading={item.heading}
                 content={item.content}
               />
-            </>
+            </div>
           );
         })}
     </article>

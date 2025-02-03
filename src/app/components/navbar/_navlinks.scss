@@ -1,6 +1,5 @@
 @import "../../../styles/variables.scss";
 
-
 .navbar_bigscreen {
   .nav_links {
     display: flex;
@@ -111,6 +110,9 @@
     padding-bottom: 1rem;
   }
   a.link {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
     display: inline-block;
     &:visited {
       color: $navcolor;
@@ -121,34 +123,25 @@
   }
   .link_icon {
     display: none;
-    // font-size: 1.1rem;
-    // @media all and (min-width: $mobileS) {
-    //   font-size: 1.5rem;
-    // }
   }
   .link_text {
     display: inline-block;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
     font-weight: 700;
     @media all and (min-width: $mobileS) {
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
-
-    // font-size: 1.8rem;
-    // @media all and (min-width: $mobileS) {
-    //   font-size: 2.2rem;
-    // }
   }
   //social
   .nav_link_list_social {
-    li{
+    li {
       display: inline;
     }
     .link_icon {
       display: block;
       color: $textcolor_white;
-      margin-left: 1.5rem;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
+      padding: 0.8rem;
       @media all and (min-width: $mobileS) {
         font-size: 1.7rem;
       }
