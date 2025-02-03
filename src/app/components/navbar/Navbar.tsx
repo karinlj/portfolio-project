@@ -1,6 +1,6 @@
 "use client";
 import "./_navbar.scss";
-import "./_navlinks.scss";
+// import "./_navlinks.scss";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -47,7 +47,7 @@ const NavBar: React.FC = () => {
         <Navlinks clickLink={clickLink} />
       </nav>
       <nav className="navbar_bigscreen">
-        <Navlinks />
+        <Navlinks/>
       </nav>
     </header>
   );

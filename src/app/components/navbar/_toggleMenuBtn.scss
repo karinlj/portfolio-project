@@ -3,12 +3,11 @@
 button.menu_btn {
   position: absolute;
   top: 0.6rem;
-  right: 1rem; //0
-  // position: relative;
-  z-index: 10000;
-  width: 60px;
-  height: 50px;
-  padding: 0 15px;
+  right: 1.5rem; 
+  z-index: 1000;
+  width: 50px;
+  height: 45px;
+  padding: 7px 9px;
   margin-right: -0.9rem;
   background: transparent;
   display: flex;
@@ -16,6 +15,7 @@ button.menu_btn {
   justify-content: center;
   border: none;
   background: transparent;
+  border-radius: $themeBorderRadius/2;
   /* Hamburger Line */
   > div {
     position: relative;
@@ -54,6 +54,7 @@ button.menu_btn {
   }
   //clicked veggoburger
   &.menu_btn_clicked {
+    border: 3px dotted $themecolorPink;
     > div {
       transform: rotate(135deg);
       /* Turns Lines Into X */

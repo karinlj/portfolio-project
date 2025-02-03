@@ -41,7 +41,7 @@ const SocialIcons: React.FC = () => {
             <a
               href={item.url}
               target="_top"
-              aria-label="Karin email"
+              aria-label={item.ariaLabel}
               className="link"
             >
               <span className="link_icon">

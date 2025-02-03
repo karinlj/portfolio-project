@@ -2,18 +2,18 @@
 
 .theme_switch {
     position: absolute;
-    z-index: 1000;
-    top: 14px;
-    right: 4rem;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
+    top: 0.8rem;
+    right: 4.5rem;
+    width: 45px;
+    height: 40px;
+    border-radius: $themeBorderRadius/2;
     background: $themecolorBlueDark;
     cursor: pointer;
     color: lightyellow;
     border: none;
-    padding: 0.5rem; 
+    padding: 7px 9px;
     transition:  0.3s all ease-in;
+    outline: none;
     @media all and (min-width: $mobileM) {
       top: 1.4rem;
         right: 1.6rem;
@@ -23,12 +23,11 @@
     }
   &:hover{
     filter: drop-shadow(0 0 3px white);
-  
   }
   &:focus{
-    outline: 4px dotted white;
-    outline-offset: 5px;
-    border-radius: none;
+    outline: 3px dotted white;
+    outline-offset: 2px;
+    filter: none;
   }
     svg {
       font-size: 1.5rem;

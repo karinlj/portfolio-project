@@ -1,8 +1,9 @@
 @import "../../../styles/variables.scss";
-@import "./navlinks.scss";
 
+.navbar_bigscreen {
 li.nav_social_link_item {
-  @extend .link_item;
+  position: relative;
+  text-align: center;
 height: 45px;
 width: 45px;
   margin-bottom: 0.3rem;
@@ -20,9 +21,13 @@ width: 45px;
 }
 
 ul.nav_link_list_social {
-  @extend .nav_link_list;
-
+  display: flex;
+  flex-direction: column;
   justify-content: flex-end;
   flex: 0 0 auto;
   margin: 0;
+  // @media all and (min-width: $desktopL) {
+  //   margin-bottom: 19rem;
+  // }
+}
 }
