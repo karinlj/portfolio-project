@@ -1,33 +1,30 @@
 @import "../../../styles/variables.scss";
 
 .navbar_bigscreen {
-li.nav_social_link_item {
-  position: relative;
-  text-align: center;
-height: 45px;
-width: 45px;
-  margin-bottom: 0.3rem;
-  a.link {
-    color: $linkcolor;
-    &.active,
-    :visited {
+  li.nav_social_link_item {
+    position: relative;
+    text-align: center;
+    height: 45px;
+    width: 45px;
+    margin-bottom: 0.3rem;
+    a.link {
       color: $linkcolor;
+      &.active,
+      :visited {
+        color: $linkcolor;
+      }
+    }
+    i {
+      font-size: 1.1rem;
+      height: 30px;
     }
   }
-  i {
-    font-size: 1.1rem;
-    height: 30px;
-  }
-}
 
-ul.nav_link_list_social {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  flex: 0 0 auto;
-  margin: 0;
-  // @media all and (min-width: $desktopL) {
-  //   margin-bottom: 19rem;
-  // }
-}
+  ul.nav_link_list_social {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex: 0 0 auto;
+    margin: 0;
+  }
 }
