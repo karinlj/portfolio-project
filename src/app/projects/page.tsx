@@ -41,9 +41,6 @@ const Projects: React.FC = () => {
   };
   useEffect(() => {
     getData();
-    console.log("my projects", projectData);
-    console.log("checkedTecniqueNames", checkedTecniqueNames);
-
   }, [checkedTecniqueNames]);
 
   if (!projectData) {

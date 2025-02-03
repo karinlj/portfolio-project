@@ -14,7 +14,6 @@ button.menu_btn {
   align-items: center;
   justify-content: center;
   border: none;
-  background: transparent;
   border-radius: $themeBorderRadius/2;
   /* Hamburger Line */
   > div {
@@ -54,7 +53,7 @@ button.menu_btn {
   }
   //clicked veggoburger
   &.menu_btn_clicked {
-    border: 3px dotted $themecolorPink;
+    border: 3px dotted $textcolor_white;
     > div {
       transform: rotate(135deg);
       /* Turns Lines Into X */

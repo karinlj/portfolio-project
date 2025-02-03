@@ -44,7 +44,6 @@ const PersonalProject: React.FC = () => {
   };
   useEffect(() => {
     getData();
-    console.log("my personalProjects", projectData);
   }, []);
 
   if (!projectData) {
