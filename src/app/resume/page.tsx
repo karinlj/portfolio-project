@@ -85,7 +85,6 @@ const Resume: React.FC = () => {
                           <div key={i}>
                             <CurriculumSection
                               fields={schoolEntry.fields}
-                            
                             />
                           </div>
                         );

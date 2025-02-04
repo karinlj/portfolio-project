@@ -10,9 +10,15 @@
     padding: 3.5rem 3.5rem 1.5rem 3.5rem;
   }
   .nav_link_list_social {
-    flex-direction: row;
-    justify-content: flex-start;
+    display: flex;
+    margin-bottom: 2rem;
+  }
+  @media all and (min-width: $mobileM) {
+    display: none;
+  }
     .nav_social_link_item {
+      font-size: 1.3rem;
+      margin-right: 1.5rem;
       a.link {
         color: $textcolor_white;
         &.active,
@@ -20,13 +26,10 @@
           color: $textcolor_white;
         }
       }
-      &:first-child {
-        margin-left: -1rem;
-      }
-    }
-    @media all and (min-width: $mobileM) {
-      display: none;
-    }
+    
+  .link_text{
+    display: none;
+  }
   }
   p {
     margin-bottom: 0.5rem;

@@ -5,6 +5,14 @@
   width: 100%;
   padding: 0.5rem 0;
   color: $textcolor_dark;
+  ul{
+    list-style-type:circle;
+    margin-left: 2rem;
+  }
+  hr {
+    visibility: hidden;
+    padding: 0.5rem 0;
+  }
   a {
     cursor: pointer;
     &:hover {
@@ -21,30 +29,36 @@
   }
   .description {
     font-size: 1rem;
-    @media all and (min-width: $desktop) {
-      font-size: 1rem;
-    }
+    // @media all and (min-width: $desktop) {
+    //   font-size: 1rem;
+    // }
+  }
+  .description_long {
+  a{
+    font-weight: 600;
+    font-size: $small_text;
+    letter-spacing: 0.5px;
+  }
   }
 }
-
 .curriculum_item_heading {
   font-size: 1rem;
   letter-spacing: 0.8px;
   margin-bottom: 0rem;
 }
 
-.styled_site_item {
-  font-weight: 500;
-  font-size: $small_text;
-  letter-spacing: 0.5px;
-  a {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 0.3rem;
-    color: $linkcolor;
-    &:hover {
-      color: $linkcolor;
-      transition: all 0.5s ease;
-    }
-  }
-}
+// .styled_site_item {
+//   font-weight: 500;
+//   font-size: $small_text;
+//   letter-spacing: 0.5px;
+//   a {
+//     position: relative;
+//     display: inline-block;
+//     margin-bottom: 0.3rem;
+//     color: $linkcolor;
+//     &:hover {
+//       color: $linkcolor;
+//       transition: all 0.5s ease;
+//     }
+//   }
+// }
