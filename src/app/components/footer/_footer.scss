@@ -12,24 +12,23 @@
   .nav_link_list_social {
     display: flex;
     margin-bottom: 2rem;
+    @media all and (min-width: $mobileM) {
+      display: none;
+    }
   }
-  @media all and (min-width: $mobileM) {
-    display: none;
-  }
-    .nav_social_link_item {
-      font-size: 1.3rem;
-      margin-right: 1.5rem;
-      a.link {
+  .nav_social_link_item {
+    font-size: 1.3rem;
+    margin-right: 1.5rem;
+    a.link {
+      color: $textcolor_white;
+      &.active,
+      :visited {
         color: $textcolor_white;
-        &.active,
-        :visited {
-          color: $textcolor_white;
-        }
       }
-    
-  .link_text{
-    display: none;
-  }
+    }
+    .link_text {
+      display: none;
+    }
   }
   p {
     margin-bottom: 0.5rem;
@@ -40,7 +39,6 @@
     margin-top: 0;
   }
 }
-
 .footer_bottom_wrapper {
   margin: 2rem 0 1rem 0;
   display: flex;
