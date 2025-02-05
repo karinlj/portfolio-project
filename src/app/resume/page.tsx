@@ -51,6 +51,15 @@ const Resume: React.FC = () => {
         {" "}
         <div className="container">
           <h2 className="heading_3 upper">Resume</h2>
+          <Link
+            href={`/Resume_new.pdf`}
+            className="resume_link"
+            target="_blank"
+            download
+          >
+            {" "}
+            Download Resume.pdf
+          </Link>
           <div className="row">
             <div className="col-12 col-lg-6" style={{ marginBottom: "2rem" }}>
               {/* Work Experience */}
@@ -94,16 +103,6 @@ const Resume: React.FC = () => {
               </section>
             </div>
           </div>
-
-          <Link
-            href={`/resume_dev_sv.pdf`}
-            className="resume_link"
-            target="_blank"
-            download
-          >
-            {" "}
-            Download Resume.pdf
-          </Link>
         </div>
       </section>
     </main>

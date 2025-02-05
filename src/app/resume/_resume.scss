@@ -28,9 +28,8 @@
 .resume_link {
   color: $turqoise_light;
   transition: all 1s ease;
-  float: right;
   display: block;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   &:hover {
     filter: drop-shadow(0 0 3px white);
   }
