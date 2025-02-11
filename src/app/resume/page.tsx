@@ -52,7 +52,7 @@ const Resume: React.FC = () => {
         <div className="container">
           <h2 className="heading_3 upper">Resume</h2>
           <Link
-            href={`/Resume_new.pdf`}
+            href={`/resume_dev_25_eng.pdf`}
             className="resume_link"
             target="_blank"
             download
@@ -91,11 +91,10 @@ const Resume: React.FC = () => {
                     {schoolItems &&
                       schoolItems.map((schoolEntry, i) => {
                         return (
-                          <div key={i}>
-                            <CurriculumSection
-                              fields={schoolEntry.fields}
-                            />
-                          </div>
+                          <CurriculumSection
+                            fields={schoolEntry.fields}
+                            key={i}
+                          />
                         );
                       })}
                   </section>

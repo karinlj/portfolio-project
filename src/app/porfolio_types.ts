@@ -103,9 +103,7 @@ export interface TypeWorkItemFields {
   sortDate?: EntryFields.Date;
   titleLink?: EntryFields.Symbol;
   date?: EntryFields.Symbol;
-  description?: EntryFields.Text;
   descriptionLong?: EntryFields.RichText;
-  siteList?: EntryFields.Symbol[];
 }
 export type TypeWorkItemSkeleton = EntrySkeletonType<
   TypeWorkItemFields,
@@ -118,9 +116,7 @@ export interface TypeSchoolItemFields {
   sortDate?: EntryFields.Date;
   titleLink?: EntryFields.Symbol;
   date?: EntryFields.Symbol;
-  description?: EntryFields.Symbol;
   descriptionLong?: EntryFields.RichText;
-  subItemList?: EntryFields.Object;
 }
 export type TypeSchoolItemSkeleton = EntrySkeletonType<
   TypeSchoolItemFields,
@@ -133,10 +129,7 @@ export interface TypeResumeFields {
     sortDate?: EntryFields.Date;
     titleLink?: EntryFields.Symbol;
     date?: EntryFields.Symbol;
-    description?: EntryFields.Symbol;
     descriptionLong?: EntryFields.RichText;
-    subItemList?: EntryFields.Object;
-    siteList?: EntryFields.Symbol[];
   };
 }
 
