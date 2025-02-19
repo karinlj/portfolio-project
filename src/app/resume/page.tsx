@@ -52,7 +52,7 @@ const Resume: React.FC = () => {
         <div className="container">
           <h2 className="heading_3 upper">Resume</h2>
           <Link
-            href={`/resume_dev_25_eng.pdf`}
+            href={`/resume_dev_25_sv.pdf`}
             className="resume_link"
             target="_blank"
             download

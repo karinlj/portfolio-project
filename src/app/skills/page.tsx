@@ -49,6 +49,7 @@ const Skills = async () => {
     faUserGroup,
     faUserCheck,
     faCss3Alt,
+
   ];
 
   type listItem = {
