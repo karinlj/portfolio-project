@@ -76,7 +76,7 @@ const Skills = async () => {
   return (
     <section className="skills_section">
       <div className="container">
-        <h2 className="heading_3 upper">Skills</h2>
+        <h1 className="heading_3 upper">Skills</h1>
       </div>
       <section className="content_section">
         <div className="container">

@@ -6,12 +6,12 @@
   &.dark {
     background: $themecolorBlueDark;
     .nav_header {
-      border-right: 1px solid  $textcolor_lighter;;
+      border-right: 1px solid $textcolor_lighter;
     }
     .about_me_section,
     .about_me_more_section {
-      border-top: 1px solid  $textcolor_lighter;;
-      color-scheme: dark; 
+      border-top: 1px solid $textcolor_lighter;
+      color-scheme: dark;
       background: $themecolorBlueDark;
     }
     footer {
@@ -25,12 +25,12 @@
   padding: 0;
   margin: 0;
 }
-:focus-visible{
+:focus-visible {
   outline: 4px dotted lightgrey;
   outline-offset: 5px;
   border-radius: none;
 }
-html{
+html {
   font-size: 16px;
 }
 body {
@@ -61,7 +61,8 @@ section.home_wrapper,
 .about_me_more_section,
 .skills_section,
 .project_section,
-.resume_section {
+.resume_section,
+.not_found_section {
   padding: 1.5rem 1rem;
   @media all and (min-width: $mobileM) {
     margin-left: 7rem;
@@ -69,46 +70,39 @@ section.home_wrapper,
   }
 }
 .dark {
-  section.home_wrapper, .project_section {
-    background:
-    linear-gradient(-90deg, rgba(0, 48, 102, .3) 1px, transparent 1px),
-    linear-gradient(rgba(0, 48, 102, .3) 1px, transparent 1px),
-    $themecolorBlueDark;
-    background-size:
-  30px 30px,
-  30px 30px,
-  80px 80px,
-  80px 80px,
-  80px 80px,
-  80px 80px,
-  80px 80px,
-  80px 80px;
-  background-color:   $themecolorBlueDark;
+  section.home_wrapper,
+  .project_section {
+    background: linear-gradient(
+        -90deg,
+        rgba(0, 48, 102, 0.3) 1px,
+        transparent 1px
+      ),
+      linear-gradient(rgba(0, 48, 102, 0.3) 1px, transparent 1px),
+      $themecolorBlueDark;
+    background-size: 30px 30px, 30px 30px, 80px 80px, 80px 80px, 80px 80px,
+      80px 80px, 80px 80px, 80px 80px;
+    background-color: $themecolorBlueDark;
   }
 }
-section.home_wrapper, .project_section {
-  background:
-  linear-gradient(-90deg, rgba(0, 12, 26, .08) 1px, transparent 1px),
-  linear-gradient(rgba(0,12, 26,.08) 1px, transparent 1px),
-  $themecolorBlueDarker;
-background-size:
-  30px 30px,
-  30px 30px,
-  80px 80px,
-  80px 80px,
-  80px 80px,
-  80px 80px,
-  80px 80px,
-  80px 80px;
- background-color:   $themecolorBlueDarker;
+section.home_wrapper,
+.project_section {
+  background: linear-gradient(
+      -90deg,
+      rgba(0, 12, 26, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(rgba(0, 12, 26, 0.08) 1px, transparent 1px),
+    $themecolorBlueDarker;
+  background-size: 30px 30px, 30px 30px, 80px 80px, 80px 80px, 80px 80px,
+    80px 80px, 80px 80px, 80px 80px;
+  background-color: $themecolorBlueDarker;
 
   min-height: 70vh;
   @media all and (min-width: $mobileM) {
     min-height: 90vh;
   }
-  .content_section{
+  .content_section {
     opacity: 1;
- 
   }
 }
 .my-gutters {
@@ -161,7 +155,7 @@ a {
   font-size: 1.5rem;
 }
 
-.loading{
+.loading {
   padding: 1rem;
   color: $lilacPastel;
 }
@@ -240,12 +234,11 @@ a {
   @media all and (min-width: $laptopL) {
     font-size: 6rem;
   }
-
   &.upper {
     text-transform: uppercase;
   }
 }
-.small_text{
+.small_text {
   font-size: $small_text;
 }
 //links

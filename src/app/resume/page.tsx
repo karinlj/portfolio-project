@@ -50,7 +50,7 @@ const Resume: React.FC = () => {
       <section className="resume_section">
         {" "}
         <div className="container">
-          <h2 className="heading_3 upper">Resume</h2>
+          <h1 className="heading_3 upper">Resume</h1>
           <Link
             href={`/resume_dev_25_sv.pdf`}
             className="resume_link"

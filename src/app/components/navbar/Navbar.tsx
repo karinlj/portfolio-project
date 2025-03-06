@@ -1,6 +1,5 @@
 "use client";
 import "./_navbar.scss";
-// import "./_navlinks.scss";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -33,13 +32,13 @@ const NavBar: React.FC = () => {
 
   return (
     <header className="nav_header" id="nav">
-      <li className="nav_home_link_item">
+      <div className="nav_home_link_item">
         <Link href="/" onClick={clickLink} className={`link ${
                   pathName === `/` ? "active" : ""
                 }`}>
           <span className="link_icon">K.</span>      
         </Link>
-      </li>
+      </div>
       <ToggleMenuBtn toggleMenu={toggleMenu} isMobileOpen={isMobileOpen} />
       <nav
         className={`navbar_mobile ${isMobileOpen ? "navbar_mobile_open" : ""}`}

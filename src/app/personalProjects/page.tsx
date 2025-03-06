@@ -53,7 +53,7 @@ const PersonalProject: React.FC = () => {
     <main>
       <section className="project_section">
         <div className="container">
-          <h2 className="heading_3 upper">Personal Projects</h2>
+          <h1 className="heading_3 upper">Personal Projects</h1>
           <p>Recent projects to explore various tecniques.</p>
           <Filter displayItems={displayItems} activeFilter={activeFilter} />
 

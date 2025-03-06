@@ -50,7 +50,7 @@ const Projects: React.FC = () => {
     <main>
       <section className="project_section">
         <div className="container">
-          <h2 className="heading_3 upper">Projects</h2>
+          <h1 className="heading_3 upper">Projects</h1>
           <p>My Client Projects</p>
           <Filter displayItems={displayItems} activeFilter={activeFilter} />
 
